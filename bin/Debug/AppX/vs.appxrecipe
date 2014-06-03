@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-03T11:53:31.017</Modified>
+      <Modified>2014-06-03T17:39:24.126</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Pong.exe">
       <PackagePath>Pong.exe</PackagePath>
-      <Modified>2014-06-03T16:32:14.053</Modified>
+      <Modified>2014-06-03T18:40:15.856</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -47,19 +47,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-06-03T11:53:30.126</Modified>
+      <Modified>2014-06-03T17:39:23.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\GameScreen.xbf">
       <PackagePath>GameScreen.xbf</PackagePath>
-      <Modified>2014-06-03T11:53:30.127</Modified>
+      <Modified>2014-06-03T17:39:23.554</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\StartScreen.xbf">
       <PackagePath>StartScreen.xbf</PackagePath>
-      <Modified>2014-06-03T11:53:30.131</Modified>
+      <Modified>2014-06-03T17:39:23.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-06-03T11:53:30.701</Modified>
+      <Modified>2014-06-03T17:39:24.023</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

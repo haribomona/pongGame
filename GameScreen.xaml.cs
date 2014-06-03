@@ -33,6 +33,11 @@ namespace Pong
         Player POne;
         Player PTwo;
 
+        bool PlOnemoveDown = false;
+        bool PlOnemoveUp = false;
+        bool PlTwomoveDown = false;
+        bool PlTwomoveUp = false;
+
         public GameScreen()
         {
             this.InitializeComponent();
@@ -47,13 +52,11 @@ namespace Pong
 
         private async void moveBall()
         {
-            bool ballmovesright = true;
-
 
             while (true)
             {
                 await Task.Delay(30);
-                moving_ball.move(gameField, ball,ballmovesright);
+                moving_ball.move(gameField,ball,POne,PTwo);
             }
            
         }
@@ -68,6 +71,23 @@ namespace Pong
 
         private void update()
         {
+            if (PlOnemoveDown)
+            {
+                POne.moveDown();
+            }
+            if (PlOnemoveUp)
+            {
+                POne.moveUp();
+            }
+            if (PlTwomoveDown)
+            {
+                PTwo.moveDown();
+            }
+            if (PlTwomoveUp)
+            {
+                PTwo.moveUp();
+            }
+
             Canvas.SetLeft(playerOne, POne.getX());
             Canvas.SetTop(playerOne, POne.getY());
             Canvas.SetLeft(playerTwo, PTwo.getX());
@@ -84,7 +104,7 @@ namespace Pong
         {
             // right player = player one
 
-            POne = new Player(430, (int)c.ActualHeight / 2 - 40);
+            POne = new Player(430, (int)c.ActualHeight / 2);
             POne.setMin(0);
             POne.setMax((int)c.ActualHeight - 80);
             playerOne = new Rectangle();
@@ -93,7 +113,7 @@ namespace Pong
             playerOne.Height = 80;
 
             // left player = player two
-            PTwo = new Player(50,(int)c.ActualHeight/2-40);
+            PTwo = new Player(50,(int)c.ActualHeight/2);
             PTwo.setMin(0);
             PTwo.setMax((int)c.ActualHeight - 80);
             playerTwo = new Rectangle();
@@ -127,22 +147,45 @@ namespace Pong
             {
 
                 case Windows.System.VirtualKey.Down:
-                    POne.moveDown();
+                    PlOnemoveDown = true;
                     break;
 
                 case Windows.System.VirtualKey.Up:
-                    POne.moveUp();
+                    PlOnemoveUp = true;
                     break;
 
                 case Windows.System.VirtualKey.Y:
-                    PTwo.moveUp();
+                    PlTwomoveDown = true;
                     break;
 
                 case Windows.System.VirtualKey.X:
-                    PTwo.moveDown();
+                    PlTwomoveUp = true;
                     break;
             }
 
+        }
+
+        private void Key_up(object sender, KeyRoutedEventArgs e)
+        {
+            switch (e.Key)
+            {
+
+                case Windows.System.VirtualKey.Down:
+                    PlOnemoveDown = false;
+                    break;
+
+                case Windows.System.VirtualKey.Up:
+                    PlOnemoveUp = false;
+                    break;
+
+                case Windows.System.VirtualKey.Y:
+                    PlTwomoveDown = false;
+                    break;
+
+                case Windows.System.VirtualKey.X:
+                    PlTwomoveUp = false;
+                    break;
+            }
         }
 
 
@@ -162,23 +205,6 @@ namespace Pong
             this.x = x;
             this.y = y;
         }
-
-       /* public void move()
-        {
-
-            while (this.x < this.max)
-            {
-                this.x += 1;
-            }
-         /*   this.x += 30;
-            if (this.x < this.max)
-            {
-                this.x = this.max;
-            }
-            else if(this.x >= this.max){
-                this.x -=1;
-            }*/
-   //     }
 
         internal void setMax(int max)
         {
@@ -200,12 +226,10 @@ namespace Pong
             return this.x;
         }
 
-        
-
-        internal void move(Canvas gameField, Ellipse ball, bool ballmovesright)
+    
+        internal void move(Canvas gameField,Ellipse ball,Player POne,Player PTwo)
         {
-
-            int ballspeed = 10;
+ 	    int ballspeed = 4;
 
             if (ballmoveright==true)
             {
@@ -233,15 +257,25 @@ namespace Pong
                 Canvas.SetTop(ball, getY());
             }
 
-            if (this.x <0) ballmoveright = true;
-            if (this.x > 500-ball.Width) ballmoveright = false;
 
             if (this.y < 0) ballmoveup = false;
-            if (this.y > 300-ball.Height) ballmoveup = true;
+            if (this.y > 300 - ball.Height) ballmoveup = true;
+
+            if (this.x < 0) ballmoveright = true;
+            if (this.x > 500-20) ballmoveright = false;
+
+            var playerOne = POne.getY();
+            var playerTwo = PTwo.getY();
+
+            // POne = rechter Spieler!!!
+            // PTwo = linker Spieler!!!!
+            // Deshalb <80 & >420 vertauschen!!!
+
+            if (this.y < POne.getY()+80 && this.y > POne.getY() && this.x>410) ballmoveright= false;
+            if (this.y < PTwo.getY()+80 && this.y > PTwo.getY() && this.x < 70) ballmoveright = true;
             
         }
-
-        }
+    }
     class Player
     {
 

@@ -49,13 +49,13 @@ C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\XamlTypeInfo.g.cs
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\XamlSaveStateFile.xml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.xaml
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.xbf
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Pong.exe
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Pong.pdb
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\priconfig.xml
