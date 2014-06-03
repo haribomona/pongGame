@@ -27,15 +27,31 @@ namespace Pong
     {
         Rectangle playerOne = new Rectangle();
         Rectangle playerTwo = new Rectangle();
+        Ellipse ball = new Ellipse();
+        Ball moving_ball;
         Player POne;
         Player PTwo;
 
         public GameScreen()
         {
             this.InitializeComponent();
-            createPlayer(gameField);
+            createGamefield(gameField);
 
+
+            moveBall();
             initGameLoop();
+
+            
+        }
+
+        private void moveBall()
+        {
+
+            Canvas.SetLeft(ball, moving_ball.getX());
+            Canvas.SetTop(ball, moving_ball.getY());
+            moving_ball.move();
+           
+            
         }
 
         private async void initGameLoop()
@@ -52,9 +68,15 @@ namespace Pong
             Canvas.SetTop(playerOne, POne.getY());
             Canvas.SetLeft(playerTwo, PTwo.getX());
             Canvas.SetTop(playerTwo, PTwo.getY());
+
+            
+
+            
+
+            
         }
 
-        private void createPlayer(Canvas c)
+        private void createGamefield(Canvas c)
         {
             // right player = player one
 
@@ -78,6 +100,19 @@ namespace Pong
             // draw ´both player to canvas
             this.gameField.Children.Add(playerTwo);
             this.gameField.Children.Add(playerOne);
+
+            // creats and draws ball to canvas
+            ball.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255,0,255,255));
+            ball.Width = 20;
+            ball.Height = 20;
+          //  ball.SetValue(Canvas.LeftProperty, 250);
+          //  ball.SetValue(Canvas.TopProperty, 150);
+
+            moving_ball = new Ball(250,150);
+            moving_ball.setMax(500);
+            moving_ball.setMin(0);
+
+            this.gameField.Children.Add(ball);
         }
 
         
@@ -109,6 +144,56 @@ namespace Pong
 
     }
 
+    class Ball
+    {
+        int x = 0;
+        int y = 0;
+        int min = 0;
+        int max = 0;
+
+        public Ball(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+        public void move()
+        {
+
+            while (this.x < this.max)
+            {
+                this.x += 1;
+            }
+         /*   this.x += 30;
+            if (this.x < this.max)
+            {
+                this.x = this.max;
+            }
+            else if(this.x >= this.max){
+                this.x -=1;
+            }*/
+        }
+
+        internal void setMax(int max)
+        {
+            this.max = max;
+        }
+
+        internal void setMin(int p)
+        {
+            this.min = p;
+        }
+
+        internal double getY()
+        {
+            return this.y;
+        }
+
+        internal double getX()
+        {
+            return this.x;
+        }
+    }
     class Player
     {
 
