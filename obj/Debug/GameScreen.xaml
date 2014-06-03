@@ -8,10 +8,13 @@
     mc:Ignorable="d">
 
     <Grid x:ConnectionId='1' Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                                  >
-        <Canvas x:Name="gameField" HorizontalAlignment="Center" Height="300" Margin="0" VerticalAlignment="Center" Width="500" Background="#FF297866">
-           
+        <Canvas x:Name="gameField" HorizontalAlignment="Center" Height="500"  VerticalAlignment="Center" Width="700">
+            <Canvas.Background>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/field-football-pitch-soccer-green-playground.png"/>
+            </Canvas.Background>
+
         </Canvas>
-       
+
         <Button Content="Button" HorizontalAlignment="Left" Margin="739,649,0,0" VerticalAlignment="Top" Opacity="0"/>
 
     </Grid>

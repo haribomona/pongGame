@@ -103,30 +103,31 @@ namespace Pong
         private void createGamefield(Canvas c)
         {
             // right player = player one
+            int height_rectangles = 120;
 
-            POne = new Player(430, (int)c.ActualHeight / 2);
+            POne = new Player((int)c.ActualWidth-50, (int)c.ActualHeight / 2-60);
             POne.setMin(0);
-            POne.setMax((int)c.ActualHeight - 80);
+            POne.setMax((int)c.ActualHeight - height_rectangles);
             playerOne = new Rectangle();
             playerOne.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
             playerOne.Width = 20;
-            playerOne.Height = 80;
+            playerOne.Height = height_rectangles;
 
             // left player = player two
-            PTwo = new Player(50,(int)c.ActualHeight/2);
+            PTwo = new Player(50,(int)c.ActualHeight/2-60);
             PTwo.setMin(0);
-            PTwo.setMax((int)c.ActualHeight - 80);
+            PTwo.setMax((int)c.ActualHeight - height_rectangles);
             playerTwo = new Rectangle();
             playerTwo.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
             playerTwo.Width = 20;
-            playerTwo.Height = 80;
+            playerTwo.Height = height_rectangles;
 
             // draw ´both player to canvas
             this.gameField.Children.Add(playerTwo);
             this.gameField.Children.Add(playerOne);
 
             // creats and draws ball to canvas
-            ball.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255,0,255,255));
+            ball.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255,255,255,0));
             ball.Width = 20;
             ball.Height = 20;
           //  ball.SetValue(Canvas.LeftProperty, 250);
@@ -229,7 +230,11 @@ namespace Pong
     
         internal void move(Canvas gameField,Ellipse ball,Player POne,Player PTwo)
         {
- 	    int ballspeed = 4;
+ 	        int ballspeed = 4;
+            int height_canvas = 500;
+            int width_canvas = 700;
+            int height_rectangles = 120;
+            
 
             if (ballmoveright==true)
             {
@@ -259,10 +264,10 @@ namespace Pong
 
 
             if (this.y < 0) ballmoveup = false;
-            if (this.y > 300 - ball.Height) ballmoveup = true;
+            if (this.y > height_canvas - ball.Height) ballmoveup = true;
 
             if (this.x < 0) ballmoveright = true;
-            if (this.x > 500-20) ballmoveright = false;
+            if (this.x > width_canvas - ball.Width) ballmoveright = false;
 
             var playerOne = POne.getY();
             var playerTwo = PTwo.getY();
@@ -271,8 +276,8 @@ namespace Pong
             // PTwo = linker Spieler!!!!
             // Deshalb <80 & >420 vertauschen!!!
 
-            if (this.y < POne.getY()+80 && this.y > POne.getY() && this.x>410) ballmoveright= false;
-            if (this.y < PTwo.getY()+80 && this.y > PTwo.getY() && this.x < 70) ballmoveright = true;
+            if (this.y < POne.getY()+height_rectangles && this.y > POne.getY() && this.x>630) ballmoveright= false;
+            if (this.y < PTwo.getY()+height_rectangles && this.y > PTwo.getY() && this.x < 70) ballmoveright = true;
             
         }
     }
