@@ -8,9 +8,19 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel Margin="0" VerticalAlignment="Center"  HorizontalAlignment="Center" Height="300" Width="500">
-            <TextBox x:Name="WillkommenBox" TextWrapping="Wrap" Text="Willkommen im Spiel" Margin="0" Height="37" HorizontalAlignment="Center" VerticalAlignment="Center" Width="295" Padding="0" UseLayoutRounding="False" MinWidth="100" MinHeight="30" HorizontalContentAlignment="Left"/>
-            <Button x:ConnectionId='1' x:Name="StartGame" Content="Spiel Starten" Width="200" Height="50" Margin="0,200,0,0" HorizontalAlignment="Center"                          />
+        <StackPanel Margin="0" VerticalAlignment="Center"  HorizontalAlignment="Center" Height="600" Width="400">
+            <StackPanel.Background>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/Sport-Activities-Ping-pong-icon.png"/>
+            </StackPanel.Background>
+            <TextBox x:Name="WillkommenBox" TextWrapping="Wrap" Text="Willkommen"  Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Width="176" Padding="0" UseLayoutRounding="False" MinWidth="100" MinHeight="30" HorizontalContentAlignment="Left" Foreground="White" FontSize="30">
+                <TextBox.Background>
+                    <ImageBrush Stretch="Fill"/>
+                </TextBox.Background>
+            </TextBox>
+            <Button x:ConnectionId='1' x:Name="_1_gegen_1" Content="1 vs 1" Width="200" Height="50"                           HorizontalAlignment="Center" Margin="0,100,0,0"/>
+            <Button x:Name="_1_gegen_Computer" Content="1 vs Computer" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50"/>
+            <Button x:Name="Challenge" Content="Challenge" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50"/>
+            <Button x:Name="Optionen" Content="Optionen" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50"/>
 
         </StackPanel>
 
