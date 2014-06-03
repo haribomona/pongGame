@@ -35,6 +35,8 @@ namespace Pong
             this.InitializeComponent();
             createPlayer(gameField);
 
+
+            
             initGameLoop();
         }
 
