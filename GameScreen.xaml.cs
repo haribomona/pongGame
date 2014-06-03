@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Shapes;
 
 namespace Pong
 {
+    
     /// <summary>
     /// Eine leere Seite, die eigenständig verwendet werden kann oder auf die innerhalb eines Rahmens navigiert werden kann.
     /// </summary>
@@ -44,14 +45,17 @@ namespace Pong
             
         }
 
-        private void moveBall()
+        private async void moveBall()
         {
+            bool ballmovesright = true;
 
-            Canvas.SetLeft(ball, moving_ball.getX());
-            Canvas.SetTop(ball, moving_ball.getY());
-            moving_ball.move();
+
+            while (true)
+            {
+                await Task.Delay(30);
+                moving_ball.move(gameField, ball,ballmovesright);
+            }
            
-            
         }
 
         private async void initGameLoop()
@@ -109,7 +113,7 @@ namespace Pong
           //  ball.SetValue(Canvas.TopProperty, 150);
 
             moving_ball = new Ball(250,150);
-            moving_ball.setMax(500);
+            moving_ball.setMax(500-20);
             moving_ball.setMin(0);
 
             this.gameField.Children.Add(ball);
@@ -150,6 +154,8 @@ namespace Pong
         int y = 0;
         int min = 0;
         int max = 0;
+        bool ballmoveup = false;
+        bool ballmoveright = true;
 
         public Ball(int x, int y)
         {
@@ -157,7 +163,7 @@ namespace Pong
             this.y = y;
         }
 
-        public void move()
+       /* public void move()
         {
 
             while (this.x < this.max)
@@ -172,7 +178,7 @@ namespace Pong
             else if(this.x >= this.max){
                 this.x -=1;
             }*/
-        }
+   //     }
 
         internal void setMax(int max)
         {
@@ -193,7 +199,49 @@ namespace Pong
         {
             return this.x;
         }
-    }
+
+        
+
+        internal void move(Canvas gameField, Ellipse ball, bool ballmovesright)
+        {
+
+            int ballspeed = 10;
+
+            if (ballmoveright==true)
+            {
+                this.x += ballspeed;
+                Canvas.SetLeft(ball, getX());
+                Canvas.SetTop(ball, getY());
+
+            }
+            else
+            {
+                this.x -= ballspeed;
+                Canvas.SetLeft(ball, getX());
+                Canvas.SetTop(ball, getY());
+            }
+            if (ballmoveup == true)
+            {
+                this.y -= ballspeed;
+                Canvas.SetLeft(ball, getX());
+                Canvas.SetTop(ball, getY());
+            }
+            else
+            {
+                this.y += ballspeed;
+                Canvas.SetLeft(ball, getX());
+                Canvas.SetTop(ball, getY());
+            }
+
+            if (this.x <0) ballmoveright = true;
+            if (this.x > 500-ball.Width) ballmoveright = false;
+
+            if (this.y < 0) ballmoveup = false;
+            if (this.y > 300-ball.Height) ballmoveup = true;
+            
+        }
+
+        }
     class Player
     {
 
