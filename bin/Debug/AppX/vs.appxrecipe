@@ -23,7 +23,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Pong.exe">
       <PackagePath>Pong.exe</PackagePath>
-      <Modified>2014-06-23T11:19:00.393</Modified>
+      <Modified>2014-06-23T12:32:46.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -47,15 +47,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-06-16T11:25:24.469</Modified>
+      <Modified>2014-06-23T12:01:26.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\GameScreen.xbf">
       <PackagePath>GameScreen.xbf</PackagePath>
-      <Modified>2014-06-23T11:19:00.208</Modified>
+      <Modified>2014-06-23T12:01:26.904</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\StartScreen.xbf">
       <PackagePath>StartScreen.xbf</PackagePath>
-      <Modified>2014-06-16T11:52:35.380</Modified>
+      <Modified>2014-06-23T12:01:26.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

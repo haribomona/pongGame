@@ -25,18 +25,16 @@ namespace Pong
     /// </summary>
     public sealed partial class GameScreen : Page
     {
-        Rectangle player = new Rectangle();
+        Rectangle playerOne = new Rectangle();
+        Rectangle playerTwo = new Rectangle();
         Player POne;
-      //  public static  int MOVE_UP = 38; // arrow up
-	  //  public static  int MOVE_DOWN = 40; // arrow down
+        Player PTwo;
 
         public GameScreen()
         {
             this.InitializeComponent();
             createPlayer(gameField);
 
-
-            
             initGameLoop();
         }
 
@@ -50,23 +48,36 @@ namespace Pong
 
         private void update()
         {
-            Canvas.SetLeft(player, POne.getX());
-            Canvas.SetTop(player, POne.getY());
+            Canvas.SetLeft(playerOne, POne.getX());
+            Canvas.SetTop(playerOne, POne.getY());
+            Canvas.SetLeft(playerTwo, PTwo.getX());
+            Canvas.SetTop(playerTwo, PTwo.getY());
         }
 
         private void createPlayer(Canvas c)
         {
+            // right player = player one
 
-            POne = new Player(50,(int)c.ActualHeight/2-40);
+            POne = new Player(430, (int)c.ActualHeight / 2 - 40);
             POne.setMin(0);
-            POne.setMax((int)c.ActualHeight-80);
-            player = new Rectangle();
-            player.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
-            player.Width = 20;
-            player.Height = 80;
-            //player.Margin = new Thickness(50);
-            //this.gameField.Children.Add(player);
-            this.gameField.Children.Add(player);
+            POne.setMax((int)c.ActualHeight - 80);
+            playerOne = new Rectangle();
+            playerOne.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
+            playerOne.Width = 20;
+            playerOne.Height = 80;
+
+            // left player = player two
+            PTwo = new Player(50,(int)c.ActualHeight/2-40);
+            PTwo.setMin(0);
+            PTwo.setMax((int)c.ActualHeight - 80);
+            playerTwo = new Rectangle();
+            playerTwo.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
+            playerTwo.Width = 20;
+            playerTwo.Height = 80;
+
+            // draw ´both player to canvas
+            this.gameField.Children.Add(playerTwo);
+            this.gameField.Children.Add(playerOne);
         }
 
         
@@ -75,12 +86,21 @@ namespace Pong
 
             switch (e.Key)  
             {
+
                 case Windows.System.VirtualKey.Down:
                     POne.moveDown();
                     break;
 
                 case Windows.System.VirtualKey.Up:
                     POne.moveUp();
+                    break;
+
+                case Windows.System.VirtualKey.Y:
+                    PTwo.moveUp();
+                    break;
+
+                case Windows.System.VirtualKey.X:
+                    PTwo.moveDown();
                     break;
             }
 
@@ -97,7 +117,7 @@ namespace Pong
         int min = 0;
         int max = 0;
 
-        int speed = 2;
+        int speed = 4;
         public Player(int x, int y)
         {
             this.x = x;
