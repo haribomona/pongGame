@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WIN-4PITH99QTRC</Machine>
+    <WindowsUser>Ramona8.1</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>d5c5fd6a-9020-447d-bc20-769001f72398</PackageIdentityName>
+    <RegisteredManifestChecksum>EA17BFB18C9BF2857C8609F1D3D8B3ED9793F84AD296B46E51EBC995247895FE</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>d5c5fd6a-9020-447d-bc20-769001f72398_1.0.0.0_neutral__jfy0tqa6j2t7t</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>d5c5fd6a-9020-447d-bc20-769001f72398_jfy0tqa6j2t7t!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>d5c5fd6a-9020-447d-bc20-769001f72398</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Ramona8.1</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-16T11:52:35.926</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Pong.exe">
+      <PackagePath>Pong.exe</PackagePath>
+      <Modified>2014-06-23T11:19:00.393</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-04-26T01:36:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-04-26T01:36:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-04-26T01:36:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-04-26T01:36:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-06-16T11:25:24.469</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\GameScreen.xbf">
+      <PackagePath>GameScreen.xbf</PackagePath>
+      <Modified>2014-06-23T11:19:00.208</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\StartScreen.xbf">
+      <PackagePath>StartScreen.xbf</PackagePath>
+      <Modified>2014-06-16T11:52:35.380</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-06-16T11:52:35.798</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
