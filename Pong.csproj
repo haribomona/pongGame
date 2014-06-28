@@ -123,9 +123,11 @@
     <None Include="Pong_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\field-football-pitch-soccer-green-playground.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Sport-Activities-Ping-pong-icon.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
   </ItemGroup>
   <ItemGroup>

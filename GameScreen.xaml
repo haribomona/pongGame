@@ -7,12 +7,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" KeyDown="Key_Down">
-        <Canvas x:Name="gameField" HorizontalAlignment="Center" Height="300" Margin="0" VerticalAlignment="Center" Width="500" Background="#FF297866">
-           
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" KeyDown="Key_Down" KeyUp="Key_up">
+        <Canvas x:Name="gameField" HorizontalAlignment="Center" Height="500"  VerticalAlignment="Center" Width="700">
+            <Canvas.Background>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/field-football-pitch-soccer-green-playground.png"/>
+            </Canvas.Background>
+
         </Canvas>
-       
+
         <Button Content="Button" HorizontalAlignment="Left" Margin="739,649,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <TextBox x:Name="PlayerOne_Counter" HorizontalAlignment="Center" Margin="0,180,200,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="30"/>
+        <TextBox x:Name="PlayerTwo_Counter" HorizontalAlignment="Center" Margin="200,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Height="30"/>
 
     </Grid>
 </Page>
