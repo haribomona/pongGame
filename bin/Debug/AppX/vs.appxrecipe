@@ -19,7 +19,11 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Modified>2014-06-24T20:31:28.714</Modified>
+=======
+      <Modified>2014-06-03T22:26:03.301</Modified>
+>>>>>>> origin/master
 =======
       <Modified>2014-06-03T22:26:03.301</Modified>
 >>>>>>> origin/master
@@ -33,11 +37,19 @@
       <PackagePath>Pong.exe</PackagePath>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Modified>2014-06-28T11:26:17.045</Modified>
 =======
       <Modified>2014-06-03T22:27:21.608</Modified>
 =======
       <Modified>2014-06-03T22:27:21.608</Modified>
+=======
+      <Modified>2014-06-03T22:27:21.608</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\field-football-pitch-soccer-green-playground.png">
+      <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
+      <Modified>2014-06-03T22:17:03.525</Modified>
+>>>>>>> origin/master
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\field-football-pitch-soccer-green-playground.png">
       <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
@@ -75,6 +87,10 @@
       <PackagePath>Assets\Sport-Activities-Ping-pong-icon.png</PackagePath>
       <Modified>2014-06-03T19:51:41.581</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\Sport-Activities-Ping-pong-icon.png">
+      <PackagePath>Assets\Sport-Activities-Ping-pong-icon.png</PackagePath>
+      <Modified>2014-06-03T19:51:41.581</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\StoreLogo.scale-100.png">
 >>>>>>> origin/master
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
@@ -85,7 +101,11 @@
       <PackagePath>App.xbf</PackagePath>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Modified>2014-06-24T20:31:27.345</Modified>
+=======
+      <Modified>2014-06-03T19:52:42.122</Modified>
+>>>>>>> origin/master
 =======
       <Modified>2014-06-03T19:52:42.122</Modified>
 >>>>>>> origin/master
@@ -97,7 +117,11 @@
       <PackagePath>GameScreen.xbf</PackagePath>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Modified>2014-06-28T11:05:06.732</Modified>
+=======
+      <Modified>2014-06-03T22:26:02.622</Modified>
+>>>>>>> origin/master
 =======
       <Modified>2014-06-03T22:26:02.622</Modified>
 >>>>>>> origin/master
@@ -109,7 +133,11 @@
       <PackagePath>StartScreen.xbf</PackagePath>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Modified>2014-06-24T20:31:27.351</Modified>
+=======
+      <Modified>2014-06-03T21:16:41.672</Modified>
+>>>>>>> origin/master
 =======
       <Modified>2014-06-03T21:16:41.672</Modified>
 >>>>>>> origin/master
@@ -121,7 +149,11 @@
       <PackagePath>resources.pri</PackagePath>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Modified>2014-06-24T20:31:28.068</Modified>
+=======
+      <Modified>2014-06-03T22:26:03.141</Modified>
+>>>>>>> origin/master
 =======
       <Modified>2014-06-03T22:26:03.141</Modified>
 >>>>>>> origin/master

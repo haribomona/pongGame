@@ -2,7 +2,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #pragma checksum "C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\GameScreen.xaml" "{406ea660-64cf-4c82-b6f0-42d48172a799}" "307A83C4709BF66549267FCAB1679ACA"
+=======
+#pragma checksum "C:\Users\Daniel\Documents\GitHub\pongGame\GameScreen.xaml" "{406ea660-64cf-4c82-b6f0-42d48172a799}" "F712662874DEEED08040AE176F0E1810"
+>>>>>>> origin/master
 =======
 #pragma checksum "C:\Users\Daniel\Documents\GitHub\pongGame\GameScreen.xaml" "{406ea660-64cf-4c82-b6f0-42d48172a799}" "F712662874DEEED08040AE176F0E1810"
 >>>>>>> origin/master
