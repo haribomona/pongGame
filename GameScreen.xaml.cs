@@ -20,12 +20,13 @@ using Windows.UI.Xaml.Shapes;
 
 namespace Pong
 {
-
+    
     /// <summary>
     /// Eine leere Seite, die eigenständig verwendet werden kann oder auf die innerhalb eines Rahmens navigiert werden kann.
     /// </summary>
     public sealed partial class GameScreen : Page
     {
+
         Rectangle playerOne = new Rectangle();
         Rectangle playerTwo = new Rectangle();
         Ellipse ball = new Ellipse();
@@ -38,16 +39,22 @@ namespace Pong
         bool PlTwomoveDown = false;
         bool PlTwomoveUp = false;
 
+        int PlayerOnePoints = 0;
+        int PlayerTwoPoints = 0;
+
         public GameScreen()
         {
             this.InitializeComponent();
+        }
+
+       
+
+        private void StartGame(object sender, RoutedEventArgs e)
+        {
+
             createGamefield(gameField);
-
-
             moveBall();
             initGameLoop();
-
-
         }
 
         private async void moveBall()
@@ -56,20 +63,31 @@ namespace Pong
             while (true)
             {
                 await Task.Delay(30);
-<<<<<<< HEAD
-                moving_ball.move(gameField, ball, POne, PTwo);
-=======
                 moving_ball.move(gameField,ball,POne,PTwo);
->>>>>>> origin/master
-            }
+                PlayerOne_Counter.Text = "" + PlayerOnePoints;
+                PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
+                if (moving_ball.getX() < 0)
+                {
+                    PlayerOnePoints++;
+                    PlayerOne_Counter.Text = "" + PlayerOnePoints;
+                    moving_ball = new Ball(350, 250);
 
+                }
+                if (moving_ball.getX() > gameField.Width - ball.Width)
+                {
+                    PlayerTwoPoints++;
+                    PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
+                    moving_ball = new Ball(350, 250);
+
+                }
+            }
+           
         }
 
         private async void initGameLoop()
         {
-            while (true)
-            {
-                await Task.Delay(40);
+            while(true){
+                await Task.Delay(10);
                 update();
             }
         }
@@ -98,23 +116,22 @@ namespace Pong
             Canvas.SetLeft(playerTwo, PTwo.getX());
             Canvas.SetTop(playerTwo, PTwo.getY());
 
+            
 
+            
 
-
-
-
+            
         }
 
         private void createGamefield(Canvas c)
         {
+
+          
+
             // right player = player one
             int height_rectangles = 120;
 
-<<<<<<< HEAD
-            POne = new Player((int)c.ActualWidth - 50, (int)c.ActualHeight / 2 - 60);
-=======
             POne = new Player((int)c.ActualWidth-50, (int)c.ActualHeight / 2-60);
->>>>>>> origin/master
             POne.setMin(0);
             POne.setMax((int)c.ActualHeight - height_rectangles);
             playerOne = new Rectangle();
@@ -123,11 +140,7 @@ namespace Pong
             playerOne.Height = height_rectangles;
 
             // left player = player two
-<<<<<<< HEAD
-            PTwo = new Player(50, (int)c.ActualHeight / 2 - 60);
-=======
             PTwo = new Player(50,(int)c.ActualHeight/2-60);
->>>>>>> origin/master
             PTwo.setMin(0);
             PTwo.setMax((int)c.ActualHeight - height_rectangles);
             playerTwo = new Rectangle();
@@ -140,28 +153,24 @@ namespace Pong
             this.gameField.Children.Add(playerOne);
 
             // creats and draws ball to canvas
-<<<<<<< HEAD
-            ball.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 0));
-=======
             ball.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255,255,255,0));
->>>>>>> origin/master
             ball.Width = 20;
             ball.Height = 20;
-            //  ball.SetValue(Canvas.LeftProperty, 250);
-            //  ball.SetValue(Canvas.TopProperty, 150);
+          //  ball.SetValue(Canvas.LeftProperty, 250);
+          //  ball.SetValue(Canvas.TopProperty, 150);
 
-            moving_ball = new Ball(250, 150);
-            moving_ball.setMax(500 - 20);
+            moving_ball = new Ball(350,250);
+            moving_ball.setMax(500-20);
             moving_ball.setMin(0);
 
             this.gameField.Children.Add(ball);
         }
 
-
+        
         private void Key_Down(object sender, KeyRoutedEventArgs e)
         {
 
-            switch (e.Key)
+            switch (e.Key)  
             {
 
                 case Windows.System.VirtualKey.Down:
@@ -206,11 +215,14 @@ namespace Pong
             }
         }
 
+        
 
     }
 
     class Ball
     {
+
+
         int x = 0;
         int y = 0;
         int min = 0;
@@ -244,27 +256,16 @@ namespace Pong
             return this.x;
         }
 
-<<<<<<< HEAD
-
-        internal void move(Canvas gameField, Ellipse ball, Player POne, Player PTwo)
-        {
-            int ballspeed = 4;
-            int height_canvas = 500;
-            int width_canvas = 700;
-            int height_rectangles = 120;
-
-=======
     
-        internal void move(Canvas gameField,Ellipse ball,Player POne,Player PTwo)
+        public void move(Canvas gameField,Ellipse ball,Player POne,Player PTwo)
         {
  	        int ballspeed = 4;
             int height_canvas = 500;
             int width_canvas = 700;
             int height_rectangles = 120;
             
->>>>>>> origin/master
 
-            if (ballmoveright == true)
+            if (ballmoveright==true)
             {
                 this.x += ballspeed;
                 Canvas.SetLeft(ball, getX());
@@ -293,10 +294,11 @@ namespace Pong
 
             if (this.y < 0) ballmoveup = false;
             if (this.y > height_canvas - ball.Height) ballmoveup = true;
-<<<<<<< HEAD
 
             if (this.x < 0) ballmoveright = true;
             if (this.x > width_canvas - ball.Width) ballmoveright = false;
+
+
 
             var playerOne = POne.getY();
             var playerTwo = PTwo.getY();
@@ -305,22 +307,7 @@ namespace Pong
             // PTwo = linker Spieler!!!!
             // Deshalb <80 & >420 vertauschen!!!
 
-            if (this.y < POne.getY() + height_rectangles && this.y > POne.getY() && this.x > 630) ballmoveright = false;
-            if (this.y < PTwo.getY() + height_rectangles && this.y > PTwo.getY() && this.x < 70) ballmoveright = true;
-=======
->>>>>>> origin/master
-
-            if (this.x < 0) ballmoveright = true;
-            if (this.x > width_canvas - ball.Width) ballmoveright = false;
-
-            var playerOne = POne.getY();
-            var playerTwo = PTwo.getY();
-
-            // POne = rechter Spieler!!!
-            // PTwo = linker Spieler!!!!
-            // Deshalb <80 & >420 vertauschen!!!
-
-            if (this.y < POne.getY()+height_rectangles && this.y > POne.getY() && this.x>630) ballmoveright= false;
+            if (this.y < POne.getY()+height_rectangles && this.y > POne.getY() && this.x> 630) ballmoveright= false;
             if (this.y < PTwo.getY()+height_rectangles && this.y > PTwo.getY() && this.x < 70) ballmoveright = true;
             
         }
@@ -341,10 +328,9 @@ namespace Pong
         }
 
         public void moveUp()
-        {
+        { 
             this.y -= this.speed;
-            if (this.y < this.min)
-            {
+            if(this.y < this.min){
                 this.y = this.min;
             }
         }
@@ -356,7 +342,7 @@ namespace Pong
             {
                 this.y = this.max;
             }
-            // this.y = this.y + this.speed > this.max ? this.max : this.y + this.speed;
+           // this.y = this.y + this.speed > this.max ? this.max : this.y + this.speed;
         }
 
         public void setMax(int max)

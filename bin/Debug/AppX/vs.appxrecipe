@@ -6,7 +6,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>d5c5fd6a-9020-447d-bc20-769001f72398</PackageIdentityName>
-    <RegisteredManifestChecksum>EA17BFB18C9BF2857C8609F1D3D8B3ED9793F84AD296B46E51EBC995247895FE</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>7D207817653340CB9764355237AF84D0EAF9F94A29DFA1DFFEE6A818D95B532A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d5c5fd6a-9020-447d-bc20-769001f72398_1.0.0.0_neutral__jfy0tqa6j2t7t</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d5c5fd6a-9020-447d-bc20-769001f72398_jfy0tqa6j2t7t!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d5c5fd6a-9020-447d-bc20-769001f72398</RegisteredPackageID>
@@ -17,149 +17,57 @@
     <AppXManifest Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2014-06-24T20:31:28.714</Modified>
-=======
-      <Modified>2014-06-03T22:26:03.301</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T22:26:03.301</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T22:26:03.301</Modified>
->>>>>>> origin/master
+      <Modified>2014-06-03T13:29:06.000</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Pong.exe">
       <PackagePath>Pong.exe</PackagePath>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2014-06-28T11:26:17.045</Modified>
-=======
-      <Modified>2014-06-03T22:27:21.608</Modified>
-=======
-      <Modified>2014-06-03T22:27:21.608</Modified>
-=======
-      <Modified>2014-06-03T22:27:21.608</Modified>
+      <Modified>2014-06-30T09:47:52.581</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\field-football-pitch-soccer-green-playground.png">
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\field-football-pitch-soccer-green-playground.png">
       <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
-      <Modified>2014-06-03T22:17:03.525</Modified>
->>>>>>> origin/master
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\field-football-pitch-soccer-green-playground.png">
-      <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
-      <Modified>2014-06-03T22:17:03.525</Modified>
->>>>>>> origin/master
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\field-football-pitch-soccer-green-playground.png">
-      <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
-      <Modified>2014-06-03T22:17:03.525</Modified>
->>>>>>> origin/master
+      <Modified>2014-06-03T13:29:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-26T01:36:00.000</Modified>
+      <Modified>2014-06-03T13:29:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-26T01:36:00.000</Modified>
+      <Modified>2014-06-03T13:29:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-26T01:36:00.000</Modified>
+      <Modified>2014-06-03T13:29:06.000</Modified>
     </AppxPackagedFile>
-<<<<<<< HEAD
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\Sport-Activities-Ping-pong-icon.png">
+      <PackagePath>Assets\Sport-Activities-Ping-pong-icon.png</PackagePath>
+      <Modified>2014-06-03T13:29:06.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\StoreLogo.scale-100.png">
-=======
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\Sport-Activities-Ping-pong-icon.png">
-      <PackagePath>Assets\Sport-Activities-Ping-pong-icon.png</PackagePath>
-      <Modified>2014-06-03T19:51:41.581</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\Sport-Activities-Ping-pong-icon.png">
-      <PackagePath>Assets\Sport-Activities-Ping-pong-icon.png</PackagePath>
-      <Modified>2014-06-03T19:51:41.581</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\Sport-Activities-Ping-pong-icon.png">
-      <PackagePath>Assets\Sport-Activities-Ping-pong-icon.png</PackagePath>
-      <Modified>2014-06-03T19:51:41.581</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\StoreLogo.scale-100.png">
->>>>>>> origin/master
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-26T01:36:00.000</Modified>
+      <Modified>2014-06-03T13:29:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2014-06-24T20:31:27.345</Modified>
-=======
-      <Modified>2014-06-03T19:52:42.122</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T19:52:42.122</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T19:52:42.122</Modified>
->>>>>>> origin/master
+      <Modified>2014-06-03T13:29:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\GameScreen.xbf">
       <PackagePath>GameScreen.xbf</PackagePath>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2014-06-28T11:05:06.732</Modified>
-=======
-      <Modified>2014-06-03T22:26:02.622</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T22:26:02.622</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T22:26:02.622</Modified>
->>>>>>> origin/master
+      <Modified>2014-06-30T09:47:52.383</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\StartScreen.xbf">
       <PackagePath>StartScreen.xbf</PackagePath>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2014-06-24T20:31:27.351</Modified>
-=======
-      <Modified>2014-06-03T21:16:41.672</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T21:16:41.672</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T21:16:41.672</Modified>
->>>>>>> origin/master
+      <Modified>2014-06-03T13:29:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2014-06-24T20:31:28.068</Modified>
-=======
-      <Modified>2014-06-03T22:26:03.141</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T22:26:03.141</Modified>
->>>>>>> origin/master
-=======
-      <Modified>2014-06-03T22:26:03.141</Modified>
->>>>>>> origin/master
+      <Modified>2014-06-03T13:29:06.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

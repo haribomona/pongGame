@@ -17,20 +17,10 @@
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Pong.exe">
       <PackagePath>Pong.exe</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\Logo.scale-100.png">
-=======
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\field-football-pitch-soccer-green-playground.png">
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\field-football-pitch-soccer-green-playground.png">
       <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\Logo.scale-100.png">
->>>>>>> origin/master
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
@@ -42,20 +32,10 @@
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\StoreLogo.scale-100.png">
-=======
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\Sport-Activities-Ping-pong-icon.png">
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\Sport-Activities-Ping-pong-icon.png">
       <PackagePath>Assets\Sport-Activities-Ping-pong-icon.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\StoreLogo.scale-100.png">
->>>>>>> origin/master
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
