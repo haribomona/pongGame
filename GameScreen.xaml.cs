@@ -130,13 +130,14 @@ namespace Pong
 
             // right player = player one
             int height_rectangles = 120;
+            int width_rectangles = 20;
 
-            POne = new Player((int)c.ActualWidth-50, (int)c.ActualHeight / 2-60);
+            POne = new Player((int)c.ActualWidth-(50 + width_rectangles), (int)c.ActualHeight / 2-60);
             POne.setMin(0);
             POne.setMax((int)c.ActualHeight - height_rectangles);
             playerOne = new Rectangle();
             playerOne.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
-            playerOne.Width = 20;
+            playerOne.Width = width_rectangles;
             playerOne.Height = height_rectangles;
 
             // left player = player two
@@ -145,7 +146,7 @@ namespace Pong
             PTwo.setMax((int)c.ActualHeight - height_rectangles);
             playerTwo = new Rectangle();
             playerTwo.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
-            playerTwo.Width = 20;
+            playerTwo.Width = width_rectangles;
             playerTwo.Height = height_rectangles;
 
             // draw ´both player to canvas
@@ -260,7 +261,7 @@ namespace Pong
     
         public void move(Canvas gameField,Ellipse ball,Player POne,Player PTwo)
         {
- 	        int ballspeed = 4;
+ 	        int ballspeed = 6;
             int height_canvas = 500;
             int width_canvas = 700;
             int height_rectangles = 120;
@@ -308,8 +309,30 @@ namespace Pong
             // PTwo = linker Spieler!!!!
             // Deshalb <80 & >420 vertauschen!!!
 
-            if (this.y < POne.getY()+height_rectangles && this.y > POne.getY() && this.x> 630) ballmoveright= false;
-            if (this.y < PTwo.getY()+height_rectangles && this.y > PTwo.getY() && this.x < 70) ballmoveright = true;
+            if (this.x > POne.getX()+20 || this.x < PTwo.getX())
+            {
+                return;
+            }
+            
+            if (this.y < POne.getY()+height_rectangles && this.y+20 > POne.getY())
+            {
+                var x = ballmoveup ? this.x : this.x + 20;
+
+                if(x >610 && x<630){
+                    ballmoveright = false;
+                }
+            }
+
+             if (this.y < PTwo.getY()+height_rectangles && this.y+20 > PTwo.getY()){
+
+
+                 if(x<70 && x>50){
+                     ballmoveright = true;
+                 }
+             }
+
+           
+            
             
         }
     }

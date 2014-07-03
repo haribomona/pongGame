@@ -143,7 +143,8 @@ namespace Pong
                     PTwo.moveDown();
                 }
             }
-            else if (moving_ball.ballmoveright == false)
+           
+            if (moving_ball.ballmoveright == false)
             {
                 if (moving_ball.getY() != PTwo.getY())
                 {
@@ -166,13 +167,14 @@ namespace Pong
 
             // right player = player one
             int height_rectangles = 120;
+            int width_rectangles = 20;
 
-            POne = new Player((int)c.ActualWidth-50, (int)c.ActualHeight / 2-60);
+            POne = new Player((int)c.ActualWidth-(50 + width_rectangles), (int)c.ActualHeight / 2-60);
             POne.setMin(0);
             POne.setMax((int)c.ActualHeight - height_rectangles);
             playerOne = new Rectangle();
             playerOne.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
-            playerOne.Width = 20;
+            playerOne.Width = width_rectangles;
             playerOne.Height = height_rectangles;
 
             // left player = player two
@@ -181,7 +183,7 @@ namespace Pong
             PTwo.setMax((int)c.ActualHeight - height_rectangles);
             playerTwo = new Rectangle();
             playerTwo.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
-            playerTwo.Width = 20;
+            playerTwo.Width = width_rectangles;
             playerTwo.Height = height_rectangles;
 
             // draw ´both player to canvas
