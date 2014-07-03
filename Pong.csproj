@@ -108,8 +108,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ComputerScreen.xaml.cs">
-      <DependentUpon>ComputerScreen.xaml</DependentUpon>
+    <Compile Include="CompScreen.xaml.cs">
+      <DependentUpon>CompScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="GameScreen.xaml.cs">
       <DependentUpon>GameScreen.xaml</DependentUpon>
@@ -138,9 +138,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ComputerScreen.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="CompScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="GameScreen.xaml">
       <SubType>Designer</SubType>

@@ -24,7 +24,7 @@ namespace Pong
     /// <summary>
     /// Eine leere Seite, die eigenständig verwendet werden kann oder auf die innerhalb eines Rahmens navigiert werden kann.
     /// </summary>
-    public sealed partial class ComputerScreen : Page
+    public sealed partial class CompScreen : Page
     {
 
         Rectangle playerOne = new Rectangle();
@@ -42,7 +42,7 @@ namespace Pong
         int PlayerOnePoints = 0;
         int PlayerTwoPoints = 0;
 
-        public ComputerScreen()
+        public CompScreen()
         {
             this.InitializeComponent();
         }
@@ -52,7 +52,7 @@ namespace Pong
         private void StartGame(object sender, RoutedEventArgs e)
         {
 
-            createGamefield();
+            createGamefield(playField);
             moveBall();
             initGameLoop();
         }
@@ -63,7 +63,7 @@ namespace Pong
             while (true)
             {
                 await Task.Delay(30);
-                moving_ball.move(gameField,ball,POne,PTwo);
+                moving_ball.move(playField,ball,POne,PTwo);
                 PlayerOne_Counter.Text = "" + PlayerOnePoints;
                 PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
                 if (moving_ball.getX() < 0)
@@ -73,7 +73,7 @@ namespace Pong
                     moving_ball = new Ball(350, 250);
 
                 }
-                if (moving_ball.getX() > gameField.Width - ball.Width)
+                if (moving_ball.getX() > playField.Width - ball.Width)
                 {
                     PlayerTwoPoints++;
                     PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
@@ -102,6 +102,7 @@ namespace Pong
             {
                 POne.moveUp();
             }
+            /*
             if (PlTwomoveDown)
             {
                 PTwo.moveDown();
@@ -110,6 +111,9 @@ namespace Pong
             {
                 PTwo.moveUp();
             }
+            */
+
+            calculateComputerPlayer();
 
             Canvas.SetLeft(playerOne, POne.getX());
             Canvas.SetTop(playerOne, POne.getY());
@@ -121,6 +125,38 @@ namespace Pong
             
 
             
+        }
+
+        private void calculateComputerPlayer()
+        {
+            double plTwo_Y = PTwo.getY() + (playerTwo.Height/ 2);
+
+            
+            if (moving_ball.ballmoveright == true)
+            {
+                if (plTwo_Y > 250)
+                {
+                    PTwo.moveUp();
+                }
+                else
+                {
+                    PTwo.moveDown();
+                }
+            }
+            else if (moving_ball.ballmoveright == false)
+            {
+                if (moving_ball.getY() != PTwo.getY())
+                {
+                    if (moving_ball.getY() < plTwo_Y)
+                    {
+                        PTwo.moveUp();
+                    }
+                    else if (moving_ball.getY() > PTwo.getY())
+                    {
+                        PTwo.moveDown();
+                    }
+                }
+            }
         }
 
         private void createGamefield(Canvas c)
@@ -149,8 +185,8 @@ namespace Pong
             playerTwo.Height = height_rectangles;
 
             // draw ´both player to canvas
-            this.gameField.Children.Add(playerTwo);
-            this.gameField.Children.Add(playerOne);
+            this.playField.Children.Add(playerTwo);
+            this.playField.Children.Add(playerOne);
 
             // creats and draws ball to canvas
             ball.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255,255,255,0));
@@ -163,7 +199,7 @@ namespace Pong
             moving_ball.setMax(500-20);
             moving_ball.setMin(0);
 
-            this.gameField.Children.Add(ball);
+            this.playField.Children.Add(ball);
         }
 
         
@@ -181,13 +217,14 @@ namespace Pong
                     PlOnemoveUp = true;
                     break;
 
-                case Windows.System.VirtualKey.Y:
+             /*   case Windows.System.VirtualKey.Y:
                     PlTwomoveDown = true;
                     break;
 
                 case Windows.System.VirtualKey.X:
                     PlTwomoveUp = true;
                     break;
+              * */
             }
 
         }
@@ -204,7 +241,7 @@ namespace Pong
                 case Windows.System.VirtualKey.Up:
                     PlOnemoveUp = false;
                     break;
-
+/*
                 case Windows.System.VirtualKey.Y:
                     PlTwomoveDown = false;
                     break;
@@ -212,6 +249,7 @@ namespace Pong
                 case Windows.System.VirtualKey.X:
                     PlTwomoveUp = false;
                     break;
+ * */
             }
         }
 
@@ -219,7 +257,6 @@ namespace Pong
 
     }
 
-    
     
 
 }

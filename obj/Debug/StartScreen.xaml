@@ -18,7 +18,7 @@
                 </TextBox.Background>
             </TextBox>
             <Button x:ConnectionId='1' x:Name="_1_gegen_1" Content="1 vs 1" Width="200" Height="50"                           HorizontalAlignment="Center" Margin="0,100,0,0"/>
-            <Button x:ConnectionId='2' x:Name="_1_gegen_Computer" Content="1 vs Computer" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50"                              />
+            <Button x:ConnectionId='2' x:Name="_1_gegen_Computer" Content="1 vs Computer" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50"                                 />
             <Button x:Name="Challenge" Content="Challenge" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50"/>
             <Button x:Name="Optionen" Content="Optionen" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50"/>
 

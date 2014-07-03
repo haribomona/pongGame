@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Pong.GameScreen"
+    x:Class="Pong.CompScreen"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Pong"
@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   >
 
-    <Grid x:ConnectionId='0' Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                                  >
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" KeyDown="Key_Down" KeyUp="Key_up">
         <Canvas x:Name="playField" HorizontalAlignment="Center" Height="500"  VerticalAlignment="Center" Width="700">
             <Canvas.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Assets/field-football-pitch-soccer-green-playground.png"/>
@@ -16,11 +16,10 @@
         </Canvas>
 
         
-        <Button x:ConnectionId='0' x:Name="StartGame_Button" Content="Start Game" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Center"                  />
+        <Button x:Name="StartGame_Button" Content="Start Game" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Center" Click="StartGame"/>
         <StackPanel Width="120" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,80,0,0" Orientation="Horizontal">
             <TextBlock x:Name="PlayerTwo_Counter" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center"/>
             <TextBlock x:Name="PlayerOne_Counter" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Height="30" VerticalAlignment="Top" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>
-

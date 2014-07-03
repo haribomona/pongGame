@@ -8,7 +8,7 @@
   >
 
     <Grid x:ConnectionId='0' Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                                  >
-        <Canvas x:Name="playField" HorizontalAlignment="Center" Height="500"  VerticalAlignment="Center" Width="700">
+        <Canvas x:Name="gameField" HorizontalAlignment="Center" Height="500"  VerticalAlignment="Center" Width="700">
             <Canvas.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Assets/field-football-pitch-soccer-green-playground.png"/>
             </Canvas.Background>

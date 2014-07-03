@@ -32,9 +32,11 @@ namespace Pong
             this.Frame.Navigate(typeof(GameScreen));
         }
 
-        private void start_Computer_Screen(object sender, RoutedEventArgs e)
+
+        private void _1_gegen_Computer_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ComputerScreen));
+            this.Frame.Navigate(typeof(CompScreen));
         }
+        
     }
 }

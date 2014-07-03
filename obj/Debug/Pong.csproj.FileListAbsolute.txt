@@ -35,7 +35,7 @@ C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Gam
 C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\StartScreen.xaml
 C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\StartScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\App.xbf
-C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\ComputerScreen.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\CompScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\GameScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\StartScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Pong.exe
@@ -45,22 +45,22 @@ C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\AppxManifest.xml
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Pong.build.appxrecipe
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.g.cs
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\ComputerScreen.g.i.cs
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\ComputerScreen.g.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.g.i.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\XamlTypeInfo.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.xaml
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\ComputerScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.xbf
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\ComputerScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Pong.exe
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Pong.pdb
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\priconfig.xml

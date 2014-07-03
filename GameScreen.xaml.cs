@@ -63,17 +63,17 @@ namespace Pong
             while (true)
             {
                 await Task.Delay(30);
-                moving_ball.moveIt(gameField,ball,POne,PTwo);
+                moving_ball.move(gameField,ball,POne,PTwo);
                 PlayerOne_Counter.Text = "" + PlayerOnePoints;
                 PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
-                if (moving_ball.getThatX() < 0)
+                if (moving_ball.getX() < 0)
                 {
                     PlayerOnePoints++;
                     PlayerOne_Counter.Text = "" + PlayerOnePoints;
                     moving_ball = new Ball(350, 250);
 
                 }
-                if (moving_ball.getThatX() > gameField.Width - ball.Width)
+                if (moving_ball.getX() > gameField.Width - ball.Width)
                 {
                     PlayerTwoPoints++;
                     PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
@@ -96,25 +96,25 @@ namespace Pong
         {
             if (PlOnemoveDown)
             {
-                POne.moveDownwards();
+                POne.moveDown();
             }
             if (PlOnemoveUp)
             {
-                POne.moveUpwards();
+                POne.moveUp();
             }
             if (PlTwomoveDown)
             {
-                PTwo.moveDownwards();
+                PTwo.moveDown();
             }
             if (PlTwomoveUp)
             {
-                PTwo.moveUpwards();
+                PTwo.moveUp();
             }
 
-            Canvas.SetLeft(playerOne, POne.getThatX());
-            Canvas.SetTop(playerOne, POne.getThatY());
-            Canvas.SetLeft(playerTwo, PTwo.getThatX());
-            Canvas.SetTop(playerTwo, PTwo.getThatY());
+            Canvas.SetLeft(playerOne, POne.getX());
+            Canvas.SetTop(playerOne, POne.getY());
+            Canvas.SetLeft(playerTwo, PTwo.getX());
+            Canvas.SetTop(playerTwo, PTwo.getY());
 
             
 
@@ -160,8 +160,8 @@ namespace Pong
           //  ball.SetValue(Canvas.TopProperty, 150);
 
             moving_ball = new Ball(350,250);
-            moving_ball.setThatMax(500-20);
-            moving_ball.setThatMin(0);
+            moving_ball.setMax(500-20);
+            moving_ball.setMin(0);
 
             this.gameField.Children.Add(ball);
         }
@@ -227,8 +227,9 @@ namespace Pong
         int y = 0;
         int min = 0;
         int max = 0;
-        bool ballmoveup = false;
-        bool ballmoveright = true;
+        public bool ballmoveup = false;
+        public bool ballmoveright = true;
+
 
         public Ball(int x, int y)
         {
@@ -268,26 +269,26 @@ namespace Pong
             if (ballmoveright==true)
             {
                 this.x += ballspeed;
-                Canvas.SetLeft(ball, getThatX());
+                Canvas.SetLeft(ball, getX());
                 Canvas.SetTop(ball, getY());
 
             }
             else
             {
                 this.x -= ballspeed;
-                Canvas.SetLeft(ball, getThatX());
+                Canvas.SetLeft(ball, getX());
                 Canvas.SetTop(ball, getY());
             }
             if (ballmoveup == true)
             {
                 this.y -= ballspeed;
-                Canvas.SetLeft(ball, getThatX());
+                Canvas.SetLeft(ball, getX());
                 Canvas.SetTop(ball, getY());
             }
             else
             {
                 this.y += ballspeed;
-                Canvas.SetLeft(ball, getThatX());
+                Canvas.SetLeft(ball, getX());
                 Canvas.SetTop(ball, getY());
             }
 
@@ -300,15 +301,15 @@ namespace Pong
 
 
 
-            var playerOne = POne.getThatY();
-            var playerTwo = PTwo.getThatY();
+            var playerOne = POne.getY();
+            var playerTwo = PTwo.getY();
 
             // POne = rechter Spieler!!!
             // PTwo = linker Spieler!!!!
             // Deshalb <80 & >420 vertauschen!!!
 
-            if (this.y < POne.getThatY()+height_rectangles && this.y > POne.getThatY() && this.x> 630) ballmoveright= false;
-            if (this.y < PTwo.getThatY()+height_rectangles && this.y > PTwo.getThatY() && this.x < 70) ballmoveright = true;
+            if (this.y < POne.getY()+height_rectangles && this.y > POne.getY() && this.x> 630) ballmoveright= false;
+            if (this.y < PTwo.getY()+height_rectangles && this.y > PTwo.getY() && this.x < 70) ballmoveright = true;
             
         }
     }
