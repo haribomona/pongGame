@@ -20,17 +20,15 @@ using Windows.UI.Xaml.Shapes;
 
 namespace Pong
 {
-    
     /// <summary>
     /// Eine leere Seite, die eigenständig verwendet werden kann oder auf die innerhalb eines Rahmens navigiert werden kann.
     /// </summary>
-    public sealed partial class GameScreen : Page
+    public sealed partial class ComputerScreen : Page
     {
-
         Rectangle playerOne = new Rectangle();
         Rectangle playerTwo = new Rectangle();
         Ellipse ball = new Ellipse();
-        Ball moving_ball;
+        Ball move_ball;
         Player POne;
         Player PTwo;
 
@@ -42,17 +40,15 @@ namespace Pong
         int PlayerOnePoints = 0;
         int PlayerTwoPoints = 0;
 
-        public GameScreen()
+
+        public ComputerScreen()
         {
             this.InitializeComponent();
         }
-
-       
-
         private void StartGame(object sender, RoutedEventArgs e)
         {
 
-            createGamefield(gameField);
+            createGamefield(computerfield);
             moveBall();
             initGameLoop();
         }
@@ -63,21 +59,21 @@ namespace Pong
             while (true)
             {
                 await Task.Delay(30);
-                moving_ball.moveIt(gameField,ball,POne,PTwo);
+                move_ball.moveIt(computerfield,ball,POne,PTwo);
                 PlayerOne_Counter.Text = "" + PlayerOnePoints;
                 PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
-                if (moving_ball.getThatX() < 0)
+                if (move_ball.getThatX() < 0)
                 {
                     PlayerOnePoints++;
                     PlayerOne_Counter.Text = "" + PlayerOnePoints;
-                    moving_ball = new Ball(350, 250);
+                    move_ball = new Ball(350, 250);
 
                 }
-                if (moving_ball.getThatX() > gameField.Width - ball.Width)
+                if (move_ball.getThatX() > computerfield.Width - ball.Width)
                 {
                     PlayerTwoPoints++;
                     PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
-                    moving_ball = new Ball(350, 250);
+                    move_ball = new Ball(350, 250);
 
                 }
             }
@@ -149,8 +145,8 @@ namespace Pong
             playerTwo.Height = height_rectangles;
 
             // draw ´both player to canvas
-            this.gameField.Children.Add(playerTwo);
-            this.gameField.Children.Add(playerOne);
+            this.computerfield.Children.Add(playerTwo);
+            this.computerfield.Children.Add(playerOne);
 
             // creats and draws ball to canvas
             ball.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255,255,255,0));
@@ -159,11 +155,11 @@ namespace Pong
           //  ball.SetValue(Canvas.LeftProperty, 250);
           //  ball.SetValue(Canvas.TopProperty, 150);
 
-            moving_ball = new Ball(350,250);
-            moving_ball.setThatMax(500-20);
-            moving_ball.setThatMin(0);
+            move_ball = new Ball(350,250);
+            move_ball.setThatMax(500-20);
+            move_ball.setThatMin(0);
 
-            this.gameField.Children.Add(ball);
+            this.computerfield.Children.Add(ball);
         }
 
         
@@ -236,12 +232,12 @@ namespace Pong
             this.y = y;
         }
 
-        internal void setMax(int max)
+        internal void setThatMax(int max)
         {
             this.max = max;
         }
 
-        internal void setMin(int p)
+        internal void setThatMin(int p)
         {
             this.min = p;
         }
@@ -251,13 +247,13 @@ namespace Pong
             return this.y;
         }
 
-        internal double getX()
+        internal double getThatX()
         {
             return this.x;
         }
 
     
-        public void move(Canvas gameField,Ellipse ball,Player POne,Player PTwo)
+        public void moveIt(Canvas gameField,Ellipse ball,Player POne,Player PTwo)
         {
  	        int ballspeed = 4;
             int height_canvas = 500;
@@ -327,7 +323,7 @@ namespace Pong
             this.y = y;
         }
 
-        public void moveUp()
+        public void moveUpwards()
         { 
             this.y -= this.speed;
             if(this.y < this.min){
@@ -335,7 +331,7 @@ namespace Pong
             }
         }
 
-        public void moveDown()
+        public void moveDownwards()
         {
             this.y += this.speed;
             if (this.y > this.max)
@@ -365,15 +361,16 @@ namespace Pong
             this.speed -= 1;
         }
 
-        public int getX()
+        public int getThatX()
         {
             return this.x;
         }
 
-        public int getY()
+        public int getThatY()
         {
             return this.y;
         }
     }
 
+    }
 }
