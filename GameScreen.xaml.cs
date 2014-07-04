@@ -238,7 +238,7 @@ namespace Pong
         int min = 0;
         int max = 0;
         public double ballspeedX = 6;
-        double ballspeedY = 9;
+        public double ballspeedY = 9;
         int LastHitWIthPaddle = 0;
 
 

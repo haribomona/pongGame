@@ -92,7 +92,7 @@ namespace Pong
                 if (PlayerTwoPoints-2 > PlayerOnePoints)
                 {
                     gameFlow = false;
-                    this.Frame.Navigate(typeof(Level2));
+                    this.Frame.Navigate(typeof(Level1));
                 }
             }
            

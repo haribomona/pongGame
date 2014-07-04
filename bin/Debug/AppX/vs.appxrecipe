@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>WIN-4PITH99QTRC</Machine>
-    <WindowsUser>Ramona8.1</WindowsUser>
+    <Machine>WINDOWSPC</Machine>
+    <WindowsUser>Daniel</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>d5c5fd6a-9020-447d-bc20-769001f72398</PackageIdentityName>
-    <RegisteredManifestChecksum>EA17BFB18C9BF2857C8609F1D3D8B3ED9793F84AD296B46E51EBC995247895FE</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>544B75E72B3326916192B3E6910918BA3CBEBD27C2B126C259366FD5DF20ECC9</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d5c5fd6a-9020-447d-bc20-769001f72398_1.0.0.0_neutral__jfy0tqa6j2t7t</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d5c5fd6a-9020-447d-bc20-769001f72398_jfy0tqa6j2t7t!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d5c5fd6a-9020-447d-bc20-769001f72398</RegisteredPackageID>
@@ -14,76 +14,80 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-07-10T06:39:38.151</Modified>
+      <Modified>2014-07-04T12:03:47.949</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Pong.exe">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Pong.exe">
       <PackagePath>Pong.exe</PackagePath>
-      <Modified>2014-07-10T06:55:32.277</Modified>
+      <Modified>2014-07-04T14:33:56.517</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\field-football-pitch-soccer-green-playground.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\field-football-pitch-soccer-green-playground.png">
       <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
-      <Modified>2014-06-03T13:29:06.000</Modified>
+      <Modified>2014-07-04T04:05:58.634</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-03T13:29:06.000</Modified>
+      <Modified>2014-07-04T04:05:58.629</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-03T13:29:06.000</Modified>
+      <Modified>2014-07-04T04:05:58.629</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-03T13:29:06.000</Modified>
+      <Modified>2014-07-04T04:05:58.630</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\Sport-Activities-Ping-pong-icon.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\Sport-Activities-Ping-pong-icon.png">
       <PackagePath>Assets\Sport-Activities-Ping-pong-icon.png</PackagePath>
-      <Modified>2014-06-03T13:29:06.000</Modified>
+      <Modified>2014-07-04T04:05:58.631</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-03T13:29:06.000</Modified>
+      <Modified>2014-07-04T04:05:58.632</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\victory.jpg">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\victory.jpg">
       <PackagePath>Assets\victory.jpg</PackagePath>
-      <Modified>2014-07-09T12:45:41.000</Modified>
+      <Modified>2014-07-04T08:02:13.384</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-07-06T16:25:06.948</Modified>
+      <Modified>2014-07-04T07:33:26.029</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\WinScreen.xbf">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level1.xbf">
+      <PackagePath>Level1.xbf</PackagePath>
+      <Modified>2014-07-04T12:03:47.228</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\WinScreen.xbf">
       <PackagePath>WinScreen.xbf</PackagePath>
-      <Modified>2014-07-10T06:55:31.958</Modified>
+      <Modified>2014-07-04T08:02:13.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Level2.xbf">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level2.xbf">
       <PackagePath>Level2.xbf</PackagePath>
-      <Modified>2014-07-09T06:37:23.541</Modified>
+      <Modified>2014-07-04T07:33:26.038</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\CompScreen.xbf">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\CompScreen.xbf">
       <PackagePath>CompScreen.xbf</PackagePath>
-      <Modified>2014-07-10T06:55:31.960</Modified>
+      <Modified>2014-07-04T08:02:13.841</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\GameScreen.xbf">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\GameScreen.xbf">
       <PackagePath>GameScreen.xbf</PackagePath>
-      <Modified>2014-07-10T06:55:31.961</Modified>
+      <Modified>2014-07-04T08:02:13.885</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\StartScreen.xbf">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\StartScreen.xbf">
       <PackagePath>StartScreen.xbf</PackagePath>
-      <Modified>2014-07-07T08:38:39.353</Modified>
+      <Modified>2014-07-04T07:33:26.045</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-07-10T06:39:37.583</Modified>
+      <Modified>2014-07-04T12:03:47.702</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

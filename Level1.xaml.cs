@@ -24,7 +24,7 @@ namespace Pong
     /// <summary>
     /// Eine leere Seite, die eigenständig verwendet werden kann oder auf die innerhalb eines Rahmens navigiert werden kann.
     /// </summary>
-    public sealed partial class Level2 : Page
+    public sealed partial class Level1 : Page
     {
 
         Rectangle playerOne = new Rectangle();
@@ -51,7 +51,7 @@ namespace Pong
         int height_rectangles = 140;
         int width_rectangles = 20;
 
-        public Level2()
+        public Level1()
         {
             this.InitializeComponent();
         }
@@ -61,11 +61,13 @@ namespace Pong
         private void StartGame(object sender, RoutedEventArgs e)
         {
 
-            createGamefield(level2);
+            createGamefield(level1);
             moveBall();
             initGameLoop();
             
         }
+
+
 
         private async void moveBall()
         {
@@ -79,10 +81,9 @@ namespace Pong
                 double ballspeed_X = moving_ball.ballspeedX;
                 double ballspeed_Y = moving_ball.ballspeedY;*/
 
-                
-
-                moving_ball.move(level2,ball,POne,PTwo);
                 obstacleOne.checkCollision(moving_ball);
+
+                moving_ball.move(level1,ball,POne,PTwo);
                 //check if ball hits obstacle
                 
 
@@ -97,19 +98,18 @@ namespace Pong
                     moving_ball = new Ball(350, 250);
 
                 }
-                if (moving_ball.getX() > level2.Width - ball.Width)
+                if (moving_ball.getX() > level1.Width - ball.Width)
                 {
                     PlayerTwoPoints++;
                     PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
                     moving_ball = new Ball(350, 250);
 
                 }
-                if (PlayerTwoPoints -2 > PlayerOnePoints)
+                if (PlayerTwoPoints - 2 > PlayerOnePoints)
                 {
                     gameFlow = false;
-                    this.Frame.Navigate(typeof(WinScreen));
+                    this.Frame.Navigate(typeof(Level2));
                 }
-
             }
            
         }
@@ -120,15 +120,16 @@ namespace Pong
         {
             while(true){
                 await Task.Delay(10);
-                updateObstacle();
+              //  updateObstacle();
                 update();
             }
         }
 
-        private void updateObstacle()
+     /*   private void updateObstacle()
         {
             obstacleOne.moveObstacle();
         }
+        */
 
         private void update()
         {
@@ -234,7 +235,7 @@ namespace Pong
 
 
             // draw obstacles
-            obstacleOne = new Obstacle((int)c.ActualWidth / 2 - 10, (int)c.ActualHeight / 2 - 150);
+            obstacleOne = new Obstacle((int)c.ActualWidth / 2 - 10, (int)c.ActualHeight / 2 - 40);
             obstacleOne.min=0;
             obstacleOne.max=(int)c.ActualHeight - height_rectangles;
             obstacle1 = new Rectangle();
@@ -248,12 +249,12 @@ namespace Pong
        //     obstacle1.SetValue(Canvas.LeftProperty, 300);
        //     obstacle1.SetValue(Canvas.TopProperty, 300);
 
-            this.level2.Children.Add(obstacle1);
+            this.level1.Children.Add(obstacle1);
 
 
             // draw ´both player to canvas
-            this.level2.Children.Add(playerTwo);
-            this.level2.Children.Add(playerOne);
+            this.level1.Children.Add(playerTwo);
+            this.level1.Children.Add(playerOne);
 
             // creats and draws ball to canvas
             ball.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255,255,255,0));
@@ -262,11 +263,11 @@ namespace Pong
           //  ball.SetValue(Canvas.LeftProperty, 250);
           //  ball.SetValue(Canvas.TopProperty, 150);
 
-            moving_ball = new Ball(350,250);
+            moving_ball = new Ball(400,250);
             moving_ball.setMax(500-20);
             moving_ball.setMin(0);
 
-            this.level2.Children.Add(ball);
+            this.level1.Children.Add(ball);
         }
 
 
@@ -326,72 +327,6 @@ namespace Pong
 
     }
 
-    class Obstacle{
-
-        // getter und setter Methode für x und y
-        public int x { get; set; }
-        public int y { get; set; }
-
-        public int min { get; set; }
-        public int max { get; set; }
-
-        int speed = 2;
-        bool isMovingUp = true;
-        public Obstacle(int x, int y)
-        {
-            this.x = x;
-            this.y = y;
-        }
-
-        public void moveObstacle()
-        {
-            if(isMovingUp){
-                this.y -= this.speed;
-                if (this.y < this.min)
-                {
-                    this.y = this.min;
-                    isMovingUp = false;
-                }
-            }
-            else
-            {
-                this.y += this.speed;
-                if (this.y > this.max)
-                {
-                    this.y = this.max;
-                    isMovingUp = true;
-                }
-            }
-        }
-
-
-
-        internal void checkCollision(Ball moving_ball)
-        {
-
-
-            if (moving_ball.ballspeedX < 0)
-            {
-                if (moving_ball.getX() <= this.x +20 && moving_ball.getX()>=this.x && moving_ball.getY()+20 >= this.y && moving_ball.getY() <= this.y + 120)  
-                {
-                    moving_ball.ballspeedX *= -1;
-                    moving_ball.ballspeedY *= -1;
-                }
-            }
-            if (moving_ball.ballspeedX > 0)
-            {
-                if (moving_ball.getX() + 20>= this.x && moving_ball.getX()+20 <=this.x +20 && moving_ball.getY()+20 >= this.y && moving_ball.getY() <= this.y + 120) 
-                {
-                    moving_ball.ballspeedX *= -1;
-                    moving_ball.ballspeedY *= -1;
-                }
-            }
-         /*   if (moving_ball.getX() >= this.x && moving_ball.getX() <= this.x + 20 && moving_ball.getY() >= this.y && moving_ball.getY() <= this.y+120)
-            {
-                moving_ball.ballspeedX *= -1;
-                moving_ball.ballspeedY *= -1;
-            }
-          * */
-        }
+    
     }   
-}
+
