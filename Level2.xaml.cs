@@ -24,15 +24,21 @@ namespace Pong
     /// <summary>
     /// Eine leere Seite, die eigenständig verwendet werden kann oder auf die innerhalb eines Rahmens navigiert werden kann.
     /// </summary>
-    public sealed partial class CompScreen : Page
+    public sealed partial class Level2 : Page
     {
 
         Rectangle playerOne = new Rectangle();
         Rectangle playerTwo = new Rectangle();
+        Rectangle obstacle1 = new Rectangle();
+        Rectangle obstacle2 = new Rectangle();
+        Rectangle obstacle3 = new Rectangle();
         Ellipse ball = new Ellipse();
         Ball moving_ball;
         Player POne;
         Player PTwo;
+        Player obstacleOne;
+        Player obstacleTwo;
+        Player obstacleThree;
 
         bool PlOnemoveDown = false;
         bool PlOnemoveUp = false;
@@ -42,7 +48,7 @@ namespace Pong
         int PlayerOnePoints = 0;
         int PlayerTwoPoints = 0;
 
-        public CompScreen()
+        public Level2()
         {
             this.InitializeComponent();
         }
@@ -52,13 +58,20 @@ namespace Pong
         private void StartGame(object sender, RoutedEventArgs e)
         {
 
-            createGamefield(playField);
+            createGamefield(level2);
             moveBall();
             initGameLoop();
             
         }
 
-
+        private void startNextLevel()
+        {
+            if (PlayerTwoPoints > PlayerOnePoints)
+            {
+                
+                this.Frame.Navigate(typeof(GameScreen));
+            }
+        }
 
         private async void moveBall()
         {
@@ -66,7 +79,7 @@ namespace Pong
             while (gameFlow == true)
             {
                 await Task.Delay(30);
-                moving_ball.move(playField,ball,POne,PTwo);
+                moving_ball.move(level2,ball,POne,PTwo);
                 PlayerOne_Counter.Text = "" + PlayerOnePoints;
                 PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
                 if (moving_ball.getX() < 0)
@@ -76,7 +89,7 @@ namespace Pong
                     moving_ball = new Ball(350, 250);
 
                 }
-                if (moving_ball.getX() > playField.Width - ball.Width)
+                if (moving_ball.getX() > level2.Width - ball.Width)
                 {
                     PlayerTwoPoints++;
                     PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
@@ -86,7 +99,7 @@ namespace Pong
                 if (PlayerTwoPoints > PlayerOnePoints)
                 {
                     gameFlow = false;
-                    this.Frame.Navigate(typeof(Level2));
+                    this.Frame.Navigate(typeof(GameScreen));
                 }
             }
            
@@ -127,6 +140,9 @@ namespace Pong
             Canvas.SetTop(playerOne, POne.getY());
             Canvas.SetLeft(playerTwo, PTwo.getX());
             Canvas.SetTop(playerTwo, PTwo.getY());
+
+        //    Canvas.SetLeft(obstacle1, obstacleOne.getX());
+        //    Canvas.SetTop(obstacle1, obstacleOne.getY());
 
             
 
@@ -195,9 +211,22 @@ namespace Pong
             playerTwo.Width = width_rectangles;
             playerTwo.Height = height_rectangles;
 
+
+            // draw obstacles
+            obstacleOne = new Player((int)c.ActualWidth - (50 + width_rectangles), (int)c.ActualHeight / 2 - 60);
+            obstacleOne.setMin(0);
+            obstacleOne.setMax((int)c.ActualHeight - height_rectangles);
+            obstacle1 = new Rectangle();
+            obstacle1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
+            obstacle1.Width = width_rectangles;
+            obstacle2.Height = height_rectangles;
+
+            this.level2.Children.Add(obstacle1);
+
+
             // draw ´both player to canvas
-            this.playField.Children.Add(playerTwo);
-            this.playField.Children.Add(playerOne);
+            this.level2.Children.Add(playerTwo);
+            this.level2.Children.Add(playerOne);
 
             // creats and draws ball to canvas
             ball.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255,255,255,0));
@@ -210,7 +239,7 @@ namespace Pong
             moving_ball.setMax(500-20);
             moving_ball.setMin(0);
 
-            this.playField.Children.Add(ball);
+            this.level2.Children.Add(ball);
         }
 
         

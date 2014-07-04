@@ -80,3 +80,8 @@ C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Com
 C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.g.cs
 C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.xaml
 C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level2.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.g.i.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.g.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.xbf

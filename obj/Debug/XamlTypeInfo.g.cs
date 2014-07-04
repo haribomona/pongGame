@@ -124,19 +124,21 @@ namespace Pong.Pong_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "Pong.CompScreen";
+            _typeNameTable = new string[6];
+            _typeNameTable[0] = "Pong.Level2";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Pong.GameScreen";
-            _typeNameTable[4] = "Pong.MainPage";
+            _typeNameTable[3] = "Pong.CompScreen";
+            _typeNameTable[4] = "Pong.GameScreen";
+            _typeNameTable[5] = "Pong.MainPage";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::Pong.CompScreen);
+            _typeTable = new global::System.Type[6];
+            _typeTable[0] = typeof(global::Pong.Level2);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Pong.GameScreen);
-            _typeTable[4] = typeof(global::Pong.MainPage);
+            _typeTable[3] = typeof(global::Pong.CompScreen);
+            _typeTable[4] = typeof(global::Pong.GameScreen);
+            _typeTable[5] = typeof(global::Pong.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -171,9 +173,10 @@ namespace Pong.Pong_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_CompScreen() { return new global::Pong.CompScreen(); }
-        private object Activate_3_GameScreen() { return new global::Pong.GameScreen(); }
-        private object Activate_4_MainPage() { return new global::Pong.MainPage(); }
+        private object Activate_0_Level2() { return new global::Pong.Level2(); }
+        private object Activate_3_CompScreen() { return new global::Pong.CompScreen(); }
+        private object Activate_4_GameScreen() { return new global::Pong.GameScreen(); }
+        private object Activate_5_MainPage() { return new global::Pong.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -185,9 +188,9 @@ namespace Pong.Pong_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Pong.CompScreen
+            case 0:   //  Pong.Level2
                 userType = new global::Pong.Pong_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_CompScreen;
+                userType.Activator = Activate_0_Level2;
                 xamlType = userType;
                 break;
 
@@ -199,15 +202,21 @@ namespace Pong.Pong_XamlTypeInfo
                 xamlType = new global::Pong.Pong_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Pong.GameScreen
+            case 3:   //  Pong.CompScreen
                 userType = new global::Pong.Pong_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_GameScreen;
+                userType.Activator = Activate_3_CompScreen;
                 xamlType = userType;
                 break;
 
-            case 4:   //  Pong.MainPage
+            case 4:   //  Pong.GameScreen
                 userType = new global::Pong.Pong_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_MainPage;
+                userType.Activator = Activate_4_GameScreen;
+                xamlType = userType;
+                break;
+
+            case 5:   //  Pong.MainPage
+                userType = new global::Pong.Pong_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_MainPage;
                 xamlType = userType;
                 break;
             }

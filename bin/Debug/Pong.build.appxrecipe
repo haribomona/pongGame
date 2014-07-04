@@ -42,6 +42,9 @@
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level2.xbf">
+      <PackagePath>Level2.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\CompScreen.xbf">
       <PackagePath>CompScreen.xbf</PackagePath>
     </AppxPackagedFile>

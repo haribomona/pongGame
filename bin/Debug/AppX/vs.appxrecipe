@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-07-04T04:06:45.365</Modified>
+      <Modified>2014-07-04T05:39:55.444</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Pong.exe">
       <PackagePath>Pong.exe</PackagePath>
-      <Modified>2014-07-04T04:39:18.323</Modified>
+      <Modified>2014-07-04T06:16:47.834</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\field-football-pitch-soccer-green-playground.png">
       <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
@@ -57,6 +57,10 @@
       <PackagePath>App.xbf</PackagePath>
       <Modified>2014-07-04T04:05:59.023</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level2.xbf">
+      <PackagePath>Level2.xbf</PackagePath>
+      <Modified>2014-07-04T05:39:54.800</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\CompScreen.xbf">
       <PackagePath>CompScreen.xbf</PackagePath>
       <Modified>2014-07-04T04:05:59.047</Modified>
@@ -71,7 +75,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-07-04T04:06:45.200</Modified>
+      <Modified>2014-07-04T05:39:55.270</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
