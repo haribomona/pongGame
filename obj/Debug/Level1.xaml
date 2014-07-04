@@ -13,13 +13,20 @@
                 <ImageBrush Stretch="Fill" ImageSource="Assets/field-football-pitch-soccer-green-playground.png"/>
             </Canvas.Background>
 
+            <Button x:ConnectionId='2' Content="Modus Selection" HorizontalAlignment="Right" VerticalAlignment="Center" Height="40" Width="150"                                   Canvas.Left="450" Canvas.Top="523"/>
+            <Button x:ConnectionId='3' x:Name="StartGame_Button" Content="Start Game" HorizontalAlignment="Center" VerticalAlignment="Center"                   Canvas.Left="126" Canvas.Top="525"/>
+
+            <Button x:ConnectionId='4' x:Name="POne_down" Content="Down" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="755" Canvas.Top="316"                                                                                        />
+            <Button x:ConnectionId='5' x:Name="POne_up" Content="Up" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="764" Canvas.Top="153" RenderTransformOrigin="0.259,0.553"                                                                                    />
+
+            <TextBlock x:Name="PlayerTwo_Counter" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center" Canvas.Left="281" Canvas.Top="-31"/>
+            <TextBlock x:Name="PlayerOne_Counter" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Height="30" VerticalAlignment="Top" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center" Canvas.Left="357" Canvas.Top="-31"/>
         </Canvas>
 
         
-        <Button x:ConnectionId='2' x:Name="StartGame_Button" Content="Start Game" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Center"                  />
+       
         <StackPanel Width="120" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,80,0,0" Orientation="Horizontal">
-            <TextBlock x:Name="PlayerTwo_Counter" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center"/>
-            <TextBlock x:Name="PlayerOne_Counter" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Height="30" VerticalAlignment="Top" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center"/>
+            
         </StackPanel>
     </Grid>
 </Page>

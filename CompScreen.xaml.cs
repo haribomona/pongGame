@@ -37,15 +37,23 @@ namespace Pong
 
         bool PlOnemoveDown = false;
         bool PlOnemoveUp = false;
-        bool PlTwomoveDown = false;
-        bool PlTwomoveUp = false;
+
 
         int PlayerOnePoints = 0;
         int PlayerTwoPoints = 0;
 
+        bool gameFlow = true;
+
+        public int x;
+
         public CompScreen()
         {
             this.InitializeComponent();
+
+            POne_up.AddHandler(PointerPressedEvent, new PointerEventHandler(this.POne_up_pointer_pressed), true);
+            POne_up.AddHandler(PointerReleasedEvent, new PointerEventHandler(this.POne_up_pointer_released), true);
+            POne_down.AddHandler(PointerPressedEvent, new PointerEventHandler(this.POne_down_pointer_pressed), true);
+            POne_down.AddHandler(PointerReleasedEvent, new PointerEventHandler(this.POne_down_pointer_released), true);
         }
 
        
@@ -61,6 +69,7 @@ namespace Pong
 
         private void Back_To_Selection_Clicked(object sender, RoutedEventArgs e)
         {
+            gameFlow = false;
             this.Frame.Navigate(typeof(MainPage));
         }
 
@@ -68,7 +77,7 @@ namespace Pong
 
         private async void moveBall()
         {
-            bool gameFlow = true;
+            
             while (gameFlow == true)
             {
                 await Task.Delay(30);
@@ -92,6 +101,11 @@ namespace Pong
                 if (PlayerTwoPoints-2 > PlayerOnePoints)
                 {
                     gameFlow = false;
+                    this.Frame.Navigate(typeof(LooseScreen));
+                }
+                if (PlayerOnePoints - 2 > PlayerTwoPoints)
+                {
+                    gameFlow = false;
                     this.Frame.Navigate(typeof(Level1));
                 }
             }
@@ -108,6 +122,7 @@ namespace Pong
 
         private void update()
         {
+            
             if (PlOnemoveDown)
             {
                 POne.moveDown();
@@ -127,6 +142,7 @@ namespace Pong
             }
             */
 
+           // calculateX(x);
             calculateComputerPlayer();
 
             Canvas.SetLeft(playerOne, POne.getX());
@@ -140,10 +156,15 @@ namespace Pong
 
             
         }
+        public int calculateX(int x){
+            return x;
+        }
 
-        private void calculateComputerPlayer()
+        public void calculateComputerPlayer()
         {
-            double plTwo_Y = PTwo.getY() + (playerTwo.Height/ 2);
+           // double plTwo_Y = PTwo.getY() + (playerTwo.Height/ 2);
+
+            double plTwo_Y = PTwo.getY() + (playerTwo.Height / 2);
 
             
      /*       if (moving_ball.ballspeedX >0)
@@ -158,8 +179,8 @@ namespace Pong
                 }
             }
       * */
-           
-            if (moving_ball.ballspeedX <0)
+            
+            if (moving_ball.ballspeedX <0 && moving_ball.getX() <x)
             {
                 if (moving_ball.getY() != PTwo.getY())
                 {
@@ -268,6 +289,25 @@ namespace Pong
                     break;
  * */
             }
+        }
+        private void POne_up_pointer_pressed(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveUp = true; ;
+        }
+
+        private void POne_up_pointer_released(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveUp = false;
+        }
+
+        private void POne_down_pointer_pressed(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveDown = true;
+        }
+
+        private void POne_down_pointer_released(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveDown = false;
         }
 
         

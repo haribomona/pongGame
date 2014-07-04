@@ -37,6 +37,11 @@ namespace Pong
         {
             this.Frame.Navigate(typeof(CompScreen));
         }
+
+        private void Options_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Options));
+        }
         
     }
 }

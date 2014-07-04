@@ -12,15 +12,25 @@
             <Canvas.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Assets/field-football-pitch-soccer-green-playground.png"/>
             </Canvas.Background>
+            <Button Content="Modus Selection" Height="40" Width="150" Click="Back_To_Selection_Clicked" Canvas.Left="445" Canvas.Top="528"/>
+            <Button x:Name="StartGame_Button" Content="Start Game" HorizontalAlignment="Center" VerticalAlignment="Center" Click="StartGame" Canvas.Left="134" Canvas.Top="528"/>
 
+
+            <Button x:Name="POne_down" Content="Down" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="755" Canvas.Top="316" PointerPressed="POne_down_pointer_pressed" PointerReleased="POne_down_pointer_released"/>
+            <Button x:Name="PTwo_up" Content="Up" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-126" Canvas.Top="153" PointerPressed="PTwo_up_pointer_pressed" PointerReleased="PTwo_up_pointer_released"/>
+            <Button x:Name="PTwo_down" Content="Down" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-135" Canvas.Top="316" PointerPressed="PTwo_down_pointer_pressed" PointerReleased="PTwo_down_pointer_released"/>
+            <Button x:Name="POne_up" Content="Up" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="764" Canvas.Top="153" RenderTransformOrigin="0.259,0.553" PointerPressed="POne_up_pointer_pressed" PointerReleased="POne_up_pointer_released"/>
+
+            <TextBlock x:Name="PlayerTwo_Counter" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center" Canvas.Left="281" Canvas.Top="-32"/>
+            <TextBlock x:Name="PlayerOne_Counter" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Height="30" VerticalAlignment="Top" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center" Canvas.Left="355" Canvas.Top="-32"/>
         </Canvas>
 
 
-        <Button x:Name="StartGame_Button" Content="Start Game" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Center" Click="StartGame"/>
+
         <StackPanel Width="120" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,80,0,0" Orientation="Horizontal">
-            <TextBlock x:Name="PlayerTwo_Counter" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center"/>
-            <TextBlock x:Name="PlayerOne_Counter" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Height="30" VerticalAlignment="Top" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center"/>
+            
         </StackPanel>
-        <Button Content="Modus Selection" HorizontalAlignment="Right" Margin="0,0,130,0" VerticalAlignment="Center" Height="40" Width="150" Click="Back_To_Selection_Clicked"/>
+
+
     </Grid>
 </Page>

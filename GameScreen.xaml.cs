@@ -43,10 +43,21 @@ namespace Pong
 
         int PlayerOnePoints = 0;
         int PlayerTwoPoints = 0;
+        bool gameFlow = true;
 
         public GameScreen()
         {
             this.InitializeComponent();
+
+            POne_up.AddHandler(PointerPressedEvent, new PointerEventHandler(this.POne_up_pointer_pressed), true);
+            POne_up.AddHandler(PointerReleasedEvent, new PointerEventHandler(this.POne_up_pointer_released), true);
+            POne_down.AddHandler(PointerPressedEvent, new PointerEventHandler(this.POne_down_pointer_pressed), true);
+            POne_down.AddHandler(PointerReleasedEvent, new PointerEventHandler(this.POne_down_pointer_released), true);
+
+            PTwo_up.AddHandler(PointerPressedEvent, new PointerEventHandler(this.PTwo_up_pointer_pressed), true);
+            PTwo_up.AddHandler(PointerReleasedEvent, new PointerEventHandler(this.PTwo_up_pointer_released), true);
+            PTwo_down.AddHandler(PointerPressedEvent, new PointerEventHandler(this.PTwo_down_pointer_pressed), true);
+            PTwo_down.AddHandler(PointerReleasedEvent, new PointerEventHandler(this.PTwo_down_pointer_released), true);
         }
 
        
@@ -62,7 +73,7 @@ namespace Pong
         private async void moveBall()
         {
 
-            while (true)
+            while (gameFlow)
             {
                 await Task.Delay(30);
                 moving_ball.move(gameField,ball,POne,PTwo);
@@ -72,9 +83,9 @@ namespace Pong
                 {
                     PlayerOnePoints++;
                     PlayerOne_Counter.Text = "" + PlayerOnePoints;
-                    if(PlayerOne_Counter.Text == "5"){
-                        this.Frame.Navigate(typeof(WinScreen));
-                    }
+                //    if(PlayerOne_Counter.Text == "5"){
+                  //      this.Frame.Navigate(typeof(WinScreen));
+                    //}
                     moving_ball = new Ball(350, 250);
 
                 }
@@ -82,12 +93,17 @@ namespace Pong
                 {
                     PlayerTwoPoints++;
                     PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
-                    if (PlayerTwo_Counter.Text == "5")
-                    {
-                        this.Frame.Navigate(typeof(WinScreen));
-                    }
+                    //if (PlayerTwo_Counter.Text == "5")
+                    //{
+                     //   this.Frame.Navigate(typeof(WinScreen));
+                    //}
                     moving_ball = new Ball(350, 250);
 
+                }
+                if (PlayerOnePoints - 2 > PlayerTwoPoints || PlayerTwoPoints - 2 > PlayerOnePoints)
+                {
+                    gameFlow = false;
+                    this.Frame.Navigate(typeof(WinScreen));
                 }
             }
            
@@ -222,12 +238,55 @@ namespace Pong
 
         private void Back_To_Selection_Clicked(object sender, RoutedEventArgs e)
         {
+            gameFlow = false;
             this.Frame.Navigate(typeof(MainPage));
+
+        }
+
+        private void POne_up_pointer_pressed(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveUp = true; ;
+        }
+
+        private void POne_up_pointer_released(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveUp = false;
+        }
+
+        private void POne_down_pointer_pressed(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveDown = true;
+        }
+
+        private void POne_down_pointer_released(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveDown = false;
+        }
+
+        private void PTwo_up_pointer_pressed(object sender, PointerRoutedEventArgs e)
+        {
+            PlTwomoveUp = true;
+        }
+
+        private void PTwo_up_pointer_released(object sender, PointerRoutedEventArgs e)
+        {
+            PlTwomoveUp = false;
+        }
+
+        private void PTwo_down_pointer_pressed(object sender, PointerRoutedEventArgs e)
+        {
+            PlTwomoveDown = true;
+        }
+
+        private void PTwo_down_pointer_released(object sender, PointerRoutedEventArgs e)
+        {
+            PlTwomoveDown = false;
         }
 
         
 
     }
+
 
     class Ball
     {
@@ -360,6 +419,7 @@ namespace Pong
         int max = 0;
 
         int speed = 4;
+        int speedComputer = 2;
         public Player(int x, int y)
         {
             this.x = x;
@@ -373,6 +433,14 @@ namespace Pong
                 this.y = this.min;
             }
         }
+        public void moveUpComputer()
+        {
+            this.y -= this.speedComputer;
+            if (this.y < this.min)
+            {
+                this.y = this.min;
+            }
+        }
 
         public void moveDown()
         {
@@ -382,6 +450,16 @@ namespace Pong
                 this.y = this.max;
             }
            // this.y = this.y + this.speed > this.max ? this.max : this.y + this.speed;
+        }
+
+        public void moveDownComputer()
+        {
+            this.y += this.speedComputer;
+            if (this.y > this.max)
+            {
+                this.y = this.max;
+            }
+            // this.y = this.y + this.speed > this.max ? this.max : this.y + this.speed;
         }
 
         public void setMax(int max)

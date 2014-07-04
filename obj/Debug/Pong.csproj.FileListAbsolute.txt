@@ -34,7 +34,27 @@ C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Gam
 C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\GameScreen.xbf
 C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\StartScreen.xaml
 C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\StartScreen.xbf
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\CompScreen.xbf
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.g.i.cs
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.g.cs
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.xaml
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.xbf
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Level2.xbf
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Level2.g.i.cs
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Level2.g.cs
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Level2.xaml
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Level2.xbf
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\WinScreen.g.i.cs
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\WinScreen.g.cs
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\WinScreen.xaml
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\WinScreen.xbf
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\WinScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\App.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level1.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\LooseScreen.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Options.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\WinScreen.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level2.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\CompScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\GameScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\StartScreen.xbf
@@ -45,6 +65,16 @@ C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\AppxManifest.xml
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Pong.build.appxrecipe
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.g.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.g.i.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.g.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\LooseScreen.g.i.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\LooseScreen.g.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Options.g.i.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Options.g.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.g.i.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.g.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.g.i.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.g.i.cs
@@ -53,14 +83,24 @@ C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\XamlTypeInfo.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\LooseScreen.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Options.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\LooseScreen.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Options.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\GameScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\XamlSaveStateFile.xml
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.xaml
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\CompScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Pong.exe
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Pong.pdb
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\priconfig.xml
@@ -75,33 +115,3 @@ C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\qualifiers.txt
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\ProjectArchitectures.txt
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\CompScreen.xbf
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.g.i.cs
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.g.cs
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.xaml
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.xbf
-C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level2.xbf
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.g.i.cs
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.g.cs
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.xaml
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.xbf
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Level2.xbf
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Level2.g.i.cs
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Level2.g.cs
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Level2.xaml
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\Level2.xbf
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\WinScreen.g.i.cs
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\WinScreen.g.cs
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\WinScreen.xaml
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\WinScreen.xbf
-C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\WinScreen.xbf
-C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\WinScreen.xbf
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.g.i.cs
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.g.cs
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.xaml
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.xbf
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.g.i.cs
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.g.cs
-C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level1.xbf
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.xaml
-C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.xbf

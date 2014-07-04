@@ -48,6 +48,12 @@
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level1.xbf">
       <PackagePath>Level1.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\LooseScreen.xbf">
+      <PackagePath>LooseScreen.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Options.xbf">
+      <PackagePath>Options.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\WinScreen.xbf">
       <PackagePath>WinScreen.xbf</PackagePath>
     </AppxPackagedFile>

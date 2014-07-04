@@ -42,8 +42,7 @@ namespace Pong
 
         bool PlOnemoveDown = false;
         bool PlOnemoveUp = false;
-        bool PlTwomoveDown = false;
-        bool PlTwomoveUp = false;
+
 
         int PlayerOnePoints = 0;
         int PlayerTwoPoints = 0;
@@ -51,9 +50,16 @@ namespace Pong
         int height_rectangles = 140;
         int width_rectangles = 20;
 
+        bool gameFlow = true;
+
         public Level2()
         {
             this.InitializeComponent();
+
+            POne_up.AddHandler(PointerPressedEvent, new PointerEventHandler(this.POne_up_pointer_pressed), true);
+            POne_up.AddHandler(PointerReleasedEvent, new PointerEventHandler(this.POne_up_pointer_released), true);
+            POne_down.AddHandler(PointerPressedEvent, new PointerEventHandler(this.POne_down_pointer_pressed), true);
+            POne_down.AddHandler(PointerReleasedEvent, new PointerEventHandler(this.POne_down_pointer_released), true);
         }
 
        
@@ -67,9 +73,17 @@ namespace Pong
             
         }
 
+        private void Back_To_Selection_Clicked(object sender, RoutedEventArgs e)
+        {
+            gameFlow = false;
+            this.Frame.Navigate(typeof(MainPage));
+            
+            
+        }
+
         private async void moveBall()
         {
-            bool gameFlow = true;
+            
             while (gameFlow == true)
             {
                 await Task.Delay(30);
@@ -105,6 +119,11 @@ namespace Pong
 
                 }
                 if (PlayerTwoPoints -2 > PlayerOnePoints)
+                {
+                    gameFlow = false;
+                    this.Frame.Navigate(typeof(LooseScreen));
+                }
+                if (PlayerOnePoints - 2 > PlayerTwoPoints)
                 {
                     gameFlow = false;
                     this.Frame.Navigate(typeof(WinScreen));
@@ -321,6 +340,25 @@ namespace Pong
  * */
             }
         }
+        private void POne_up_pointer_pressed(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveUp = true; ;
+        }
+
+        private void POne_up_pointer_released(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveUp = false;
+        }
+
+        private void POne_down_pointer_pressed(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveDown = true;
+        }
+
+        private void POne_down_pointer_released(object sender, PointerRoutedEventArgs e)
+        {
+            PlOnemoveDown = false;
+        }
 
         
 
@@ -393,5 +431,7 @@ namespace Pong
             }
           * */
         }
+
+        
     }   
 }
