@@ -113,7 +113,7 @@ namespace Pong
             }
             */
 
-           // calculateComputerPlayer();
+            calculateComputerPlayer();
 
             Canvas.SetLeft(playerOne, POne.getX());
             Canvas.SetTop(playerOne, POne.getY());
@@ -127,12 +127,12 @@ namespace Pong
             
         }
 
-       /* private void calculateComputerPlayer()
+        private void calculateComputerPlayer()
         {
             double plTwo_Y = PTwo.getY() + (playerTwo.Height/ 2);
 
             
-            if (moving_ball.ballmoveright == true)
+            if (moving_ball.ballspeedX >0)
             {
                 if (plTwo_Y > 250)
                 {
@@ -144,7 +144,7 @@ namespace Pong
                 }
             }
            
-            if (moving_ball.ballmoveright == false)
+            if (moving_ball.ballspeedX <0)
             {
                 if (moving_ball.getY() != PTwo.getY())
                 {
@@ -158,7 +158,7 @@ namespace Pong
                     }
                 }
             }
-        }*/
+        }
 
         private void createGamefield(Canvas c)
         {

@@ -228,8 +228,8 @@ namespace Pong
         double y = 0;
         int min = 0;
         int max = 0;
-        double ballspeedX = 4;
-        double ballspeedY = 9;
+        public double ballspeedX = 4;
+        public double ballspeedY = 9;
         const double ballspeed = 15;
         int LastHitWIthPaddle = 0;
 

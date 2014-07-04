@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   >
 
-    <Grid x:ConnectionId='1' Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                                  >
+    <Grid x:ConnectionId='0' Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                                  >
         <Canvas x:Name="playField" HorizontalAlignment="Center" Height="500"  VerticalAlignment="Center" Width="700">
             <Canvas.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Assets/field-football-pitch-soccer-green-playground.png"/>
@@ -16,7 +16,7 @@
         </Canvas>
 
         
-        <Button x:ConnectionId='2' x:Name="StartGame_Button" Content="Start Game" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Center"                  />
+        <Button x:ConnectionId='0' x:Name="StartGame_Button" Content="Start Game" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Center"                  />
         <StackPanel Width="120" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,80,0,0" Orientation="Horizontal">
             <TextBlock x:Name="PlayerTwo_Counter" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center"/>
             <TextBlock x:Name="PlayerOne_Counter" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Height="30" VerticalAlignment="Top" Style="{StaticResource SubtitleTextBlockStyle}" Width="60" TextAlignment="Center"/>
