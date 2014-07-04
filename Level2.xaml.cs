@@ -141,8 +141,6 @@ namespace Pong
             Canvas.SetLeft(playerTwo, PTwo.getX());
             Canvas.SetTop(playerTwo, PTwo.getY());
 
-        //    Canvas.SetLeft(obstacle1, obstacleOne.getX());
-        //    Canvas.SetTop(obstacle1, obstacleOne.getY());
 
             
 
@@ -213,13 +211,19 @@ namespace Pong
 
 
             // draw obstacles
-            obstacleOne = new Player((int)c.ActualWidth - (50 + width_rectangles), (int)c.ActualHeight / 2 - 60);
-            obstacleOne.setMin(0);
-            obstacleOne.setMax((int)c.ActualHeight - height_rectangles);
+          //  obstacleOne = new Player((int)c.ActualWidth - (50 + width_rectangles), (int)c.ActualHeight / 2 - 60);
+          //  obstacleOne.setMin(0);
+          //  obstacleOne.setMax((int)c.ActualHeight - height_rectangles);
             obstacle1 = new Rectangle();
             obstacle1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
             obstacle1.Width = width_rectangles;
             obstacle2.Height = height_rectangles;
+
+       //     Canvas.SetLeft(obstacle1, 300);
+       //     Canvas.SetTop(obstacle1, 200);
+
+            obstacle1.SetValue(Canvas.LeftProperty, 300);
+            obstacle1.SetValue(Canvas.TopProperty, 300);
 
             this.level2.Children.Add(obstacle1);
 
