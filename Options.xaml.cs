@@ -27,6 +27,7 @@ namespace Pong
             this.InitializeComponent();
         }
 
+        public static int level;
 
         private void _1_gegen_Computer_Click(object sender, RoutedEventArgs e)
         {
@@ -36,30 +37,40 @@ namespace Pong
         private void Level_choosen(object sender, RoutedEventArgs e)
         {
             CompScreen computer = new CompScreen();
-            int level;
+            
 
             if (One.IsSelected == true)
             {
-                level = 200;
-                computer.calculateX(level);
+                level = 100;
+              //  computer.calculateX(level);
             }
             if (Two.IsSelected == true)
             {
-                level = 300;
-                computer.calculateX(level);
+                level = 200;
+               // computer.calculateX(level);
             }
             if (Three.IsSelected == true)
             {
-                level = 400;
-                computer.calculateX(level);
+                level = 300;
+             //   computer.calculateX(level);
             }
             if (Four.IsSelected == true)
             {
-                level = 500;
-                computer.calculateX(level);
+                level = 400;
+                //computer.calculateX(level);
             }
 
             this.Frame.Navigate(typeof(CompScreen));
+        }
+
+        internal double getX()
+        {
+            return level;
+        }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
         
     }

@@ -14,9 +14,8 @@
             </StackPanel.Background>
             <TextBlock  Text="Willkommen" FontSize="40" Foreground="Black" HorizontalAlignment="Center"/>
             <Button x:Name="_1_gegen_1" Content="1 vs 1" Width="200" Height="50" Click="StartGame_Clicked" HorizontalAlignment="Center" Margin="0,100,0,0" Foreground="Black"/>
-            <Button x:Name="_1_gegen_Computer" Content="1 vs Computer" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50" Click="_1_gegen_Computer_Click" Foreground="Black" />
-            <Button x:Name="Challenge" Content="Challenge" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50" Foreground="Black"/>
-            <Button x:Name="Optionen" Content="Optionen" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50" Foreground="Black" Click="Options_Clicked"/>
+            <Button x:Name="Optionen" Content="1 vs Computer" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50" Foreground="Black" Click="Options_Clicked" Margin="100,0"/>
+            <Button x:Name="Challenge" Content="Instructions" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50" Foreground="Black" Click="start_Instructions"/>
 
         </StackPanel>
 

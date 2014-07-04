@@ -68,6 +68,7 @@ namespace Pong
             createGamefield(gameField);
             moveBall();
             initGameLoop();
+            this.StartGame_Button.IsHitTestVisible = false;
         }
 
         private async void moveBall()
@@ -202,11 +203,11 @@ namespace Pong
                     PlOnemoveUp = true;
                     break;
 
-                case Windows.System.VirtualKey.Y:
+                case Windows.System.VirtualKey.S:
                     PlTwomoveDown = true;
                     break;
 
-                case Windows.System.VirtualKey.X:
+                case Windows.System.VirtualKey.W:
                     PlTwomoveUp = true;
                     break;
             }
@@ -226,11 +227,11 @@ namespace Pong
                     PlOnemoveUp = false;
                     break;
 
-                case Windows.System.VirtualKey.Y:
+                case Windows.System.VirtualKey.S:
                     PlTwomoveDown = false;
                     break;
 
-                case Windows.System.VirtualKey.X:
+                case Windows.System.VirtualKey.W:
                     PlTwomoveUp = false;
                     break;
             }

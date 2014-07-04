@@ -52,6 +52,7 @@ C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Win
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\App.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level1.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\LooseScreen.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Instruction.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Options.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\WinScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Level2.xbf
@@ -69,6 +70,8 @@ C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\LooseScreen.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\LooseScreen.g.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Instruction.g.i.cs
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Instruction.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Options.g.i.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Options.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.g.i.cs
@@ -85,6 +88,7 @@ C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\XamlTypeInfo.g.cs
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\LooseScreen.xaml
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Instruction.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Options.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.xaml
@@ -94,6 +98,7 @@ C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\StartScreen.xaml
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\App.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level1.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\LooseScreen.xbf
+C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Instruction.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Options.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\WinScreen.xbf
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\Level2.xbf

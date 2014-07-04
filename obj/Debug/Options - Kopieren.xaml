@@ -20,8 +20,8 @@
                 <ComboBoxItem x:Name="Three" Content="3"/>
                 <ComboBoxItem x:Name="Four" Content="4"/>
             </ComboBox>
-            <Button x:ConnectionId='1' x:Name="OK" Content="OK" Width="200" Height="50"                       HorizontalAlignment="Center" Margin="100,20,100,0" Foreground="Black"/>
-            <Button x:ConnectionId='2' x:Name="Back_Button" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50"              Foreground="Black" Margin="100,0" />
+            <Button x:ConnectionId='0' x:Name="OK" Content="OK" Width="200" Height="50"                       HorizontalAlignment="Center" Margin="100,20,100,0" Foreground="Black"/>
+            <Button x:ConnectionId='0' x:Name="Back_Button" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200" Height="50"              Foreground="Black" Margin="100,0" />
 
         </StackPanel>
 

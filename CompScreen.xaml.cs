@@ -44,7 +44,7 @@ namespace Pong
 
         bool gameFlow = true;
 
-        public int x;
+        public static int x;
 
         public CompScreen()
         {
@@ -64,6 +64,7 @@ namespace Pong
             createGamefield(playField);
             moveBall();
             initGameLoop();
+            this.StartGame_Button.IsHitTestVisible = false;
             
         }
 
@@ -98,12 +99,12 @@ namespace Pong
                     moving_ball = new Ball(350, 250);
 
                 }
-                if (PlayerTwoPoints-2 > PlayerOnePoints)
+                if (PlayerTwoPoints-1 > PlayerOnePoints)
                 {
                     gameFlow = false;
                     this.Frame.Navigate(typeof(LooseScreen));
                 }
-                if (PlayerOnePoints - 2 > PlayerTwoPoints)
+                if (PlayerOnePoints - 1 > PlayerTwoPoints)
                 {
                     gameFlow = false;
                     this.Frame.Navigate(typeof(Level1));
@@ -156,10 +157,11 @@ namespace Pong
 
             
         }
-        public int calculateX(int x){
+     /*   public int calculateX(int x){
             return x;
         }
 
+      * */
         public void calculateComputerPlayer()
         {
            // double plTwo_Y = PTwo.getY() + (playerTwo.Height/ 2);
@@ -179,8 +181,9 @@ namespace Pong
                 }
             }
       * */
-            
-            if (moving_ball.ballspeedX <0 && moving_ball.getX() <x)
+            Options option = new Options();
+
+            if (moving_ball.ballspeedX <0 && moving_ball.getX() <option.getX())
             {
                 if (moving_ball.getY() != PTwo.getY())
                 {

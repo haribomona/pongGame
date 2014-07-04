@@ -51,6 +51,9 @@
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\LooseScreen.xbf">
       <PackagePath>LooseScreen.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Instruction.xbf">
+      <PackagePath>Instruction.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Options.xbf">
       <PackagePath>Options.xbf</PackagePath>
     </AppxPackagedFile>

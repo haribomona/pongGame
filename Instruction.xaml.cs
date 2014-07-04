@@ -20,28 +20,16 @@ namespace Pong
     /// <summary>
     /// Eine leere Seite, die eigenständig verwendet werden kann oder auf die innerhalb eines Rahmens navigiert werden kann.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class Instruction : Page
     {
-        public MainPage()
+        public Instruction()
         {
             this.InitializeComponent();
         }
 
-        private void StartGame_Clicked(object sender, RoutedEventArgs e)
+        private void Back(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(GameScreen));
-        }
-
-
-
-        private void Options_Clicked(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Options));
-        }
-
-        private void start_Instructions(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Instruction));
+            this.Frame.Navigate(typeof(MainPage));
         }
         
     }

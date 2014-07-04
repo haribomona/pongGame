@@ -114,6 +114,9 @@
     <Compile Include="LooseScreen.xaml.cs">
       <DependentUpon>LooseScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Instruction.xaml.cs">
+      <DependentUpon>Instruction.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Options.xaml.cs">
       <DependentUpon>Options.xaml</DependentUpon>
     </Compile>
@@ -159,6 +162,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="LooseScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Instruction.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

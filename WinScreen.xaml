@@ -12,7 +12,7 @@
             <Canvas.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Assets/field-football-pitch-soccer-green-playground.png"/>
             </Canvas.Background>
-            <Button x:Name="Restart_Button" Content="Back to assortment" Canvas.Left="242" Canvas.Top="321" Height="65" Width="230" Click="Restart_Button_Clicked" Background="#FF0F0F0F"/>
+            <Button x:Name="Restart_Button" Content="Modus selection" Canvas.Left="242" Canvas.Top="321" Height="65" Width="230" Click="Restart_Button_Clicked" Background="#FF0F0F0F"/>
             <TextBlock Canvas.Left="259" TextWrapping="Wrap" Text="You Win !" Canvas.Top="71" FontSize="50" Foreground="White"/>
 
         </Canvas>
