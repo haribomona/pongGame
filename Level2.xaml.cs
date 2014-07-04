@@ -141,6 +141,12 @@ namespace Pong
             Canvas.SetLeft(playerTwo, PTwo.getX());
             Canvas.SetTop(playerTwo, PTwo.getY());
 
+          //  obstacle1.SetValue(Canvas.LeftProperty, 300);
+          //  obstacle1.SetValue(Canvas.TopProperty, 300);
+
+                 Canvas.SetLeft(obstacle1, obstacleOne.getX());
+                 Canvas.SetTop(obstacle1, obstacleOne.getY());
+
 
             
 
@@ -196,7 +202,7 @@ namespace Pong
             POne.setMin(0);
             POne.setMax((int)c.ActualHeight - height_rectangles);
             playerOne = new Rectangle();
-            playerOne.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
+            playerOne.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 0, 0));
             playerOne.Width = width_rectangles;
             playerOne.Height = height_rectangles;
 
@@ -205,25 +211,25 @@ namespace Pong
             PTwo.setMin(0);
             PTwo.setMax((int)c.ActualHeight - height_rectangles);
             playerTwo = new Rectangle();
-            playerTwo.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
+            playerTwo.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 0, 0));
             playerTwo.Width = width_rectangles;
             playerTwo.Height = height_rectangles;
 
 
             // draw obstacles
-          //  obstacleOne = new Player((int)c.ActualWidth - (50 + width_rectangles), (int)c.ActualHeight / 2 - 60);
+            obstacleOne = new Player((int)c.ActualWidth - (50 + width_rectangles), (int)c.ActualHeight / 2 - 60);
           //  obstacleOne.setMin(0);
           //  obstacleOne.setMax((int)c.ActualHeight - height_rectangles);
             obstacle1 = new Rectangle();
-            obstacle1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 0, 0));
+            obstacle1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 123, 23, 123));
             obstacle1.Width = width_rectangles;
             obstacle2.Height = height_rectangles;
 
        //     Canvas.SetLeft(obstacle1, 300);
        //     Canvas.SetTop(obstacle1, 200);
 
-            obstacle1.SetValue(Canvas.LeftProperty, 300);
-            obstacle1.SetValue(Canvas.TopProperty, 300);
+       //     obstacle1.SetValue(Canvas.LeftProperty, 300);
+       //     obstacle1.SetValue(Canvas.TopProperty, 300);
 
             this.level2.Children.Add(obstacle1);
 
