@@ -132,18 +132,7 @@ namespace Pong
             {
                 POne.moveUp();
             }
-            /*
-            if (PlTwomoveDown)
-            {
-                PTwo.moveDown();
-            }
-            if (PlTwomoveUp)
-            {
-                PTwo.moveUp();
-            }
-            */
 
-           // calculateX(x);
             calculateComputerPlayer();
 
             Canvas.SetLeft(playerOne, POne.getX());
@@ -157,30 +146,13 @@ namespace Pong
 
             
         }
-     /*   public int calculateX(int x){
-            return x;
-        }
-
-      * */
+//Daniel
         public void calculateComputerPlayer()
         {
-           // double plTwo_Y = PTwo.getY() + (playerTwo.Height/ 2);
+
 
             double plTwo_Y = PTwo.getY() + (playerTwo.Height / 2);
 
-            
-     /*       if (moving_ball.ballspeedX >0)
-            {
-                if (plTwo_Y > 250)
-                {
-                    PTwo.moveUp();
-                }
-                else
-                {
-                    PTwo.moveDown();
-                }
-            }
-      * */
             Options option = new Options();
 
             if (moving_ball.ballspeedX <0 && moving_ball.getX() <option.getX())
@@ -258,14 +230,6 @@ namespace Pong
                     PlOnemoveUp = true;
                     break;
 
-             /*   case Windows.System.VirtualKey.Y:
-                    PlTwomoveDown = true;
-                    break;
-
-                case Windows.System.VirtualKey.X:
-                    PlTwomoveUp = true;
-                    break;
-              * */
             }
 
         }
@@ -282,15 +246,7 @@ namespace Pong
                 case Windows.System.VirtualKey.Up:
                     PlOnemoveUp = false;
                     break;
-/*
-                case Windows.System.VirtualKey.Y:
-                    PlTwomoveDown = false;
-                    break;
 
-                case Windows.System.VirtualKey.X:
-                    PlTwomoveUp = false;
-                    break;
- * */
             }
         }
         private void POne_up_pointer_pressed(object sender, PointerRoutedEventArgs e)

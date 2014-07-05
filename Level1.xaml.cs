@@ -47,7 +47,7 @@ namespace Pong
         int PlayerOnePoints = 0;
         int PlayerTwoPoints = 0;
 
-        int height_rectangles = 140;
+        int height_rectangles = 120;
         int width_rectangles = 20;
 
         bool gameFlow = true;
@@ -78,7 +78,7 @@ namespace Pong
             this.Frame.Navigate(typeof(MainPage));
         }
 
-
+//Ramona
         private async void moveBall()
         {
             
@@ -115,6 +115,7 @@ namespace Pong
                     moving_ball = new Ball(350, 250);
 
                 }
+//Daniel
                 if (PlayerTwoPoints - 1 > PlayerOnePoints)
                 {
                     gameFlow = false;
@@ -140,11 +141,7 @@ namespace Pong
             }
         }
 
-     /*   private void updateObstacle()
-        {
-            obstacleOne.moveObstacle();
-        }
-        */
+
 
         private void update()
         {
@@ -156,16 +153,7 @@ namespace Pong
             {
                 POne.moveUp();
             }
-            /*
-            if (PlTwomoveDown)
-            {
-                PTwo.moveDown();
-            }
-            if (PlTwomoveUp)
-            {
-                PTwo.moveUp();
-            }
-            */
+
 
             calculateComputerPlayer();
 
@@ -174,11 +162,10 @@ namespace Pong
             Canvas.SetLeft(playerTwo, PTwo.getX());
             Canvas.SetTop(playerTwo, PTwo.getY());
 
-          //  obstacle1.SetValue(Canvas.LeftProperty, 300);
-          //  obstacle1.SetValue(Canvas.TopProperty, 300);
 
-                 Canvas.SetLeft(obstacle1, obstacleOne.x);
-                 Canvas.SetTop(obstacle1, obstacleOne.y);
+
+            Canvas.SetLeft(obstacle1, obstacleOne.x);
+            Canvas.SetTop(obstacle1, obstacleOne.y);
 
 
             
@@ -192,19 +179,7 @@ namespace Pong
         {
             double plTwo_Y = PTwo.getY() + (playerTwo.Height/ 2);
 
-            
-     /*       if (moving_ball.ballspeedX >0)
-            {
-                if (plTwo_Y > 250)
-                {
-                    PTwo.moveUp();
-                }
-                else
-                {
-                    PTwo.moveDown();
-                }
-            }
-      * */
+
             Options option = new Options();
             if (moving_ball.ballspeedX < 0 && moving_ball.getX() < option.getX())
             {
@@ -302,14 +277,7 @@ namespace Pong
                     PlOnemoveUp = true;
                     break;
 
-             /*   case Windows.System.VirtualKey.Y:
-                    PlTwomoveDown = true;
-                    break;
 
-                case Windows.System.VirtualKey.X:
-                    PlTwomoveUp = true;
-                    break;
-              * */
             }
 
         }
@@ -326,15 +294,7 @@ namespace Pong
                 case Windows.System.VirtualKey.Up:
                     PlOnemoveUp = false;
                     break;
-/*
-                case Windows.System.VirtualKey.Y:
-                    PlTwomoveDown = false;
-                    break;
 
-                case Windows.System.VirtualKey.X:
-                    PlTwomoveUp = false;
-                    break;
- * */
             }
         }
 

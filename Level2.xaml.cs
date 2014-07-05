@@ -160,16 +160,7 @@ namespace Pong
             {
                 POne.moveUp();
             }
-            /*
-            if (PlTwomoveDown)
-            {
-                PTwo.moveDown();
-            }
-            if (PlTwomoveUp)
-            {
-                PTwo.moveUp();
-            }
-            */
+
 
             calculateComputerPlayer();
 
@@ -197,18 +188,7 @@ namespace Pong
             double plTwo_Y = PTwo.getY() + (playerTwo.Height/ 2);
 
             
-     /*       if (moving_ball.ballspeedX >0)
-            {
-                if (plTwo_Y > 250)
-                {
-                    PTwo.moveUp();
-                }
-                else
-                {
-                    PTwo.moveDown();
-                }
-            }
-      * */
+
             Options option = new Options();
 
             if (moving_ball.ballspeedX < 0 && moving_ball.getX() < option.getX())
@@ -263,11 +243,7 @@ namespace Pong
             obstacle1.Width = width_rectangles;
             obstacle1.Height = height_rectangles;
 
-       //     Canvas.SetLeft(obstacle1, 300);
-       //     Canvas.SetTop(obstacle1, 200);
 
-       //     obstacle1.SetValue(Canvas.LeftProperty, 300);
-       //     obstacle1.SetValue(Canvas.TopProperty, 300);
 
             this.level2.Children.Add(obstacle1);
 
@@ -366,6 +342,7 @@ namespace Pong
 
     }
 
+//Ramona
     class Obstacle{
 
         // getter und setter Methode für x und y
@@ -405,7 +382,7 @@ namespace Pong
         }
 
 
-
+//Daniel
         internal void checkCollision(Ball moving_ball)
         {
 

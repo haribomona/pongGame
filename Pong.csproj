@@ -151,6 +151,7 @@
     <Content Include="Assets\Sport-Activities-Ping-pong-icon.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\victory.jpg" />
+    <Content Include="Code-Aufteilung.txt" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // Die Elementvorlage "Leere Seite" ist unter http://go.microsoft.com/fwlink/?LinkId=234238 dokumentiert.
 
+//Ramona
 namespace Pong
 {
     /// <summary>

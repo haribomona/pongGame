@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Shapes;
 
 // Die Elementvorlage "Leere Seite" ist unter http://go.microsoft.com/fwlink/?LinkId=234238 dokumentiert.
 
+
 namespace Pong
 {
     
@@ -44,7 +45,7 @@ namespace Pong
         int PlayerOnePoints = 0;
         int PlayerTwoPoints = 0;
         bool gameFlow = true;
-
+//Daniel
         public GameScreen()
         {
             this.InitializeComponent();
@@ -70,14 +71,15 @@ namespace Pong
             initGameLoop();
             this.StartGame_Button.IsHitTestVisible = false;
         }
-
+//Ramona
         private async void moveBall()
         {
-
+//Daniel
             while (gameFlow)
             {
                 await Task.Delay(30);
                 moving_ball.move(gameField,ball,POne,PTwo);
+//Ramona
                 PlayerOne_Counter.Text = "" + PlayerOnePoints;
                 PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
                 if (moving_ball.getX() < 0)
@@ -101,6 +103,7 @@ namespace Pong
                     moving_ball = new Ball(350, 250);
 
                 }
+//Daniel
                 if (PlayerOnePoints - 2 > PlayerTwoPoints || PlayerTwoPoints - 2 > PlayerOnePoints)
                 {
                     gameFlow = false;
@@ -109,7 +112,7 @@ namespace Pong
             }
            
         }
-
+//Daniel
         private async void initGameLoop()
         {
             while(true){
@@ -117,7 +120,7 @@ namespace Pong
                 update();
             }
         }
-
+//Daniel
         private void update()
         {
             if (PlOnemoveDown)
@@ -143,7 +146,7 @@ namespace Pong
             Canvas.SetTop(playerTwo, PTwo.getY());
 
         }
-
+//Ramona
         private void createGamefield(Canvas c)
         {
 
@@ -188,7 +191,7 @@ namespace Pong
             this.gameField.Children.Add(ball);
         }
 
-        
+//Daniel        
         private void Key_Down(object sender, KeyRoutedEventArgs e)
         {
 
@@ -213,7 +216,7 @@ namespace Pong
             }
 
         }
-
+//Daniel
         private void Key_up(object sender, KeyRoutedEventArgs e)
         {
             switch (e.Key)
@@ -236,7 +239,7 @@ namespace Pong
                     break;
             }
         }
-
+//Daniel
         private void Back_To_Selection_Clicked(object sender, RoutedEventArgs e)
         {
             gameFlow = false;
@@ -288,7 +291,7 @@ namespace Pong
 
     }
 
-
+//Ramona
     class Ball
     {
 
@@ -411,6 +414,9 @@ namespace Pong
             }
         }
     }
+
+//Daniel und Ramona
+
     class Player
     {
 

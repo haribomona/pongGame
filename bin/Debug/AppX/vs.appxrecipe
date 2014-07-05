@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-07-04T23:05:16.900</Modified>
+      <Modified>2014-07-04T23:44:23.549</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\Pong.exe">
       <PackagePath>Pong.exe</PackagePath>
-      <Modified>2014-07-04T23:05:16.746</Modified>
+      <Modified>2014-07-04T23:44:23.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\Assets\field-football-pitch-soccer-green-playground.png">
       <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
@@ -99,7 +99,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Daniel\Documents\GitHub\pongGame\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-07-04T23:05:16.849</Modified>
+      <Modified>2014-07-04T23:44:23.375</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -20,6 +20,8 @@ namespace Pong
     /// <summary>
     /// Eine leere Seite, die eigenständig verwendet werden kann oder auf die innerhalb eines Rahmens navigiert werden kann.
     /// </summary>
+    /// 
+//Daniel
     public sealed partial class LooseScreen : Page
     {
         public LooseScreen()
