@@ -224,12 +224,14 @@ namespace Pong
     {
 
 
-        int x = 0;
-        int y = 0;
+        double x = 0;
+        double y = 0;
         int min = 0;
         int max = 0;
-        public bool ballmoveup = false;
-        public bool ballmoveright = true;
+        double ballspeedX = 4;
+        double ballspeedY = 9;
+        const double ballspeed = 15;
+        int LastHitWIthPaddle = 0;
 
 
         public Ball(int x, int y)
@@ -261,47 +263,29 @@ namespace Pong
     
         public void move(Canvas gameField,Ellipse ball,Player POne,Player PTwo)
         {
- 	        int ballspeed = 6;
+ 	      
             int height_canvas = 500;
             int width_canvas = 700;
             int height_rectangles = 120;
+
+            LastHitWIthPaddle++;
+
             
-
-            if (ballmoveright==true)
-            {
-                this.x += ballspeed;
+                this.x += ballspeedX;
+                this.y += ballspeedY;
                 Canvas.SetLeft(ball, getX());
                 Canvas.SetTop(ball, getY());
 
-            }
-            else
-            {
-                this.x -= ballspeed;
-                Canvas.SetLeft(ball, getX());
-                Canvas.SetTop(ball, getY());
-            }
-            if (ballmoveup == true)
-            {
-                this.y -= ballspeed;
-                Canvas.SetLeft(ball, getX());
-                Canvas.SetTop(ball, getY());
-            }
-            else
-            {
-                this.y += ballspeed;
-                Canvas.SetLeft(ball, getX());
-                Canvas.SetTop(ball, getY());
-            }
+                if (this.y < 0 || this.y > height_canvas - ball.Height)
+                {
+                    ballspeedY *= -1;
+                }
 
-
-            if (this.y < 0) ballmoveup = false;
-            if (this.y > height_canvas - ball.Height) ballmoveup = true;
-
-            if (this.x < 0) ballmoveright = true;
-            if (this.x > width_canvas - ball.Width) ballmoveright = false;
-
-
-
+                if (this.x < 0 || this.x > width_canvas - ball.Width)
+                {
+                    ballspeedX *= -1;
+                }
+       
             var playerOne = POne.getY();
             var playerTwo = PTwo.getY();
 
@@ -309,17 +293,30 @@ namespace Pong
             // PTwo = linker Spieler!!!!
             // Deshalb <80 & >420 vertauschen!!!
 
+            if(LastHitWIthPaddle < 10){
+                return;
+            }
+
             if (this.x > POne.getX()+20 || this.x < PTwo.getX())
             {
+
                 return;
             }
             
+            double distanceToPaddleOneMiddle = this.y+10 - (POne.getY() + (height_rectangles/2));
+            double distanceToPaddleTwoMiddle = this.y+10 - (PTwo.getY() + (height_rectangles/2));
+
             if (this.y < POne.getY()+height_rectangles && this.y+20 > POne.getY())
             {
-                var x = ballmoveup ? this.x : this.x + 20;
+                var x = ballspeedY <0 ? this.x : this.x + 20;
 
                 if(x >610 && x<630){
-                    ballmoveright = false;
+                    
+                    ballspeedY *= distanceToPaddleOneMiddle / 100;
+                   var tempballspeedX = ballspeed - Math.Abs(ballspeedY);
+                   System.Diagnostics.Debug.WriteLine(ballspeedY);
+                   this.ballspeedX = ballspeedX > 0 ? tempballspeedX * -1 : tempballspeedX;
+                    LastHitWIthPaddle = 0;
                 }
             }
 
@@ -327,7 +324,13 @@ namespace Pong
 
 
                  if(x<70 && x>50){
-                     ballmoveright = true;
+
+                     ballspeedY *= (distanceToPaddleTwoMiddle / 100);
+                     var tempspeedX = ballspeed - Math.Abs(ballspeedY);
+                     System.Diagnostics.Debug.WriteLine(ballspeedY);
+                     this.ballspeedX = ballspeedX > 0 ? tempspeedX * -1 : tempspeedX;
+                    // System.Diagnostics.Debug.WriteLine(distanceToPaddleTwoMiddle);
+                     LastHitWIthPaddle = 0;
                  }
              }
 

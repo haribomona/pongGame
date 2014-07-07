@@ -75,3 +75,8 @@ C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\qualifiers.txt
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Daniel\Documents\GitHub\pongGame\obj\Debug\ProjectArchitectures.txt
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\CompScreen.xbf
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.g.i.cs
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.g.cs
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.xaml
+C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\obj\Debug\CompScreen.xbf

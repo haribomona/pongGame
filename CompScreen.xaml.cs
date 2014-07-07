@@ -113,7 +113,7 @@ namespace Pong
             }
             */
 
-            calculateComputerPlayer();
+           // calculateComputerPlayer();
 
             Canvas.SetLeft(playerOne, POne.getX());
             Canvas.SetTop(playerOne, POne.getY());
@@ -127,7 +127,7 @@ namespace Pong
             
         }
 
-        private void calculateComputerPlayer()
+       /* private void calculateComputerPlayer()
         {
             double plTwo_Y = PTwo.getY() + (playerTwo.Height/ 2);
 
@@ -158,7 +158,7 @@ namespace Pong
                     }
                 }
             }
-        }
+        }*/
 
         private void createGamefield(Canvas c)
         {
