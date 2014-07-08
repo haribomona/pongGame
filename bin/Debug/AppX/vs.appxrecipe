@@ -23,7 +23,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Pong.exe">
       <PackagePath>Pong.exe</PackagePath>
-      <Modified>2014-07-07T13:22:13.761</Modified>
+      <Modified>2014-07-08T12:23:06.293</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\field-football-pitch-soccer-green-playground.png">
       <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>

@@ -312,10 +312,14 @@ namespace Pong
 
                 if(x >610 && x<630){
                     
-                    ballspeedY *= distanceToPaddleOneMiddle / 100;
-                   var tempballspeedX = ballspeed - Math.Abs(ballspeedY);
+                   ballspeedY *= (distanceToPaddleOneMiddle / 100);
                    System.Diagnostics.Debug.WriteLine(ballspeedY);
-                   this.ballspeedX = ballspeedX > 0 ? tempballspeedX * -1 : tempballspeedX;
+                   this.ballspeedX = ballspeed - Math.Abs(ballspeedY);
+                   this.ballspeedX = ballspeedX > 0 ? ballspeedX : ballspeedX * -1;
+                   var tempballspeedX = ballspeed + Math.Abs(ballspeedX);
+                   ballspeedX *= -1;
+                 
+                    
                     LastHitWIthPaddle = 0;
                 }
             }
@@ -326,10 +330,11 @@ namespace Pong
                  if(x<70 && x>50){
 
                      ballspeedY *= (distanceToPaddleTwoMiddle / 100);
-                     var tempspeedX = ballspeed - Math.Abs(ballspeedY);
-                     System.Diagnostics.Debug.WriteLine(ballspeedY);
-                     this.ballspeedX = ballspeedX > 0 ? tempspeedX * -1 : tempspeedX;
-                    // System.Diagnostics.Debug.WriteLine(distanceToPaddleTwoMiddle);
+                     //var tempspeedX = ballspeed + Math.Abs(ballspeedY);
+                     this.ballspeedX = ballspeed - Math.Abs(ballspeedY);
+                     this.ballspeedX = ballspeedX > 0 ? ballspeedX : ballspeedX * -1;
+                    // System.Diagnostics.Debug.WriteLine(Math.Abs(ballspeedY));
+                     
                      LastHitWIthPaddle = 0;
                  }
              }
