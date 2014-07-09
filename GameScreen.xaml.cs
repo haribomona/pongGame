@@ -116,11 +116,6 @@ namespace Pong
             Canvas.SetLeft(playerTwo, PTwo.getX());
             Canvas.SetTop(playerTwo, PTwo.getY());
 
-            
-
-            
-
-            
         }
 
         private void createGamefield(Canvas c)
@@ -228,9 +223,8 @@ namespace Pong
         double y = 0;
         int min = 0;
         int max = 0;
-        public double ballspeedX = 4;
-        public double ballspeedY = 9;
-        const double ballspeed = 15;
+        public double ballspeedX = 6;
+        double ballspeedY = 9;
         int LastHitWIthPaddle = 0;
 
 
@@ -260,32 +254,32 @@ namespace Pong
             return this.x;
         }
 
-    
-        public void move(Canvas gameField,Ellipse ball,Player POne,Player PTwo)
+
+        public void move(Canvas gameField, Ellipse ball, Player POne, Player PTwo)
         {
- 	      
+
             int height_canvas = 500;
             int width_canvas = 700;
             int height_rectangles = 120;
 
             LastHitWIthPaddle++;
 
-            
-                this.x += ballspeedX;
-                this.y += ballspeedY;
-                Canvas.SetLeft(ball, getX());
-                Canvas.SetTop(ball, getY());
 
-                if (this.y < 0 || this.y > height_canvas - ball.Height)
-                {
-                    ballspeedY *= -1;
-                }
+            this.x += ballspeedX;
+            this.y += ballspeedY;
+            Canvas.SetLeft(ball, getX());
+            Canvas.SetTop(ball, getY());
 
-                if (this.x < 0 || this.x > width_canvas - ball.Width)
-                {
-                    ballspeedX *= -1;
-                }
-       
+            if (this.y < 0 || this.y > height_canvas - ball.Height)
+            {
+                ballspeedY *= -1;
+            }
+
+            if (this.x < 0 || this.x > width_canvas - ball.Width)
+            {
+                ballspeedX *= -1;
+            }
+
             var playerOne = POne.getY();
             var playerTwo = PTwo.getY();
 
@@ -293,55 +287,54 @@ namespace Pong
             // PTwo = linker Spieler!!!!
             // Deshalb <80 & >420 vertauschen!!!
 
-            if(LastHitWIthPaddle < 10){
+            if (LastHitWIthPaddle < 10)
+            {
                 return;
             }
 
-            if (this.x > POne.getX()+20 || this.x < PTwo.getX())
+            if (this.x > POne.getX() + 20 || this.x < PTwo.getX())
             {
 
                 return;
             }
-            
-            double distanceToPaddleOneMiddle = this.y+10 - (POne.getY() + (height_rectangles/2));
-            double distanceToPaddleTwoMiddle = this.y+10 - (PTwo.getY() + (height_rectangles/2));
 
-            if (this.y < POne.getY()+height_rectangles && this.y+20 > POne.getY())
+            double distanceToPaddleOneMiddle = this.y + 10 - (POne.getY() + (height_rectangles / 2));
+            double distanceToPaddleTwoMiddle = this.y + 10 - (PTwo.getY() + (height_rectangles / 2));
+
+            if (this.y < POne.getY() + height_rectangles && this.y + 20 > POne.getY())
             {
-                var x = ballspeedY <0 ? this.x : this.x + 20;
+                var x = ballspeedY < 0 ? this.x : this.x + 20;
 
-                if(x >610 && x<630){
-                    
-                   ballspeedY *= (distanceToPaddleOneMiddle / 100);
-                   System.Diagnostics.Debug.WriteLine(ballspeedY);
-                   this.ballspeedX = ballspeed - Math.Abs(ballspeedY);
-                   this.ballspeedX = ballspeedX > 0 ? ballspeedX : ballspeedX * -1;
-                   var tempballspeedX = ballspeed + Math.Abs(ballspeedX);
-                   ballspeedX *= -1;
-                 
-                    
+                if (x > 610 && x < 630)
+                {
+
+                    ballspeedY = ballspeedY * ((distanceToPaddleOneMiddle / 10) / ballspeedY);
+
+                    System.Diagnostics.Debug.WriteLine(ballspeedY);
+
+                    this.ballspeedX = ballspeedX + Math.Abs(ballspeedY);
+                    this.ballspeedX = ballspeedX > 0 ? ballspeedX : ballspeedX * -1;
+                    ballspeedX *= -1;
+
                     LastHitWIthPaddle = 0;
                 }
             }
 
-             if (this.y < PTwo.getY()+height_rectangles && this.y+20 > PTwo.getY()){
+            if (this.y < PTwo.getY() + height_rectangles && this.y + 20 > PTwo.getY())
+            {
 
 
-                 if(x<70 && x>50){
+                if (x < 70 && x > 50)
+                {
 
-                     ballspeedY *= (distanceToPaddleTwoMiddle / 100);
-                     //var tempspeedX = ballspeed + Math.Abs(ballspeedY);
-                     this.ballspeedX = ballspeed - Math.Abs(ballspeedY);
-                     this.ballspeedX = ballspeedX > 0 ? ballspeedX : ballspeedX * -1;
-                    // System.Diagnostics.Debug.WriteLine(Math.Abs(ballspeedY));
-                     
-                     LastHitWIthPaddle = 0;
-                 }
-             }
+                    ballspeedY = ballspeedY * ((distanceToPaddleTwoMiddle / 10) / ballspeedY);
 
-           
-            
-            
+                    this.ballspeedX = ballspeedX + Math.Abs(ballspeedY);
+                    this.ballspeedX = ballspeedX > 0 ? ballspeedX : ballspeedX * -1;
+
+                    LastHitWIthPaddle = 0;
+                }
+            }
         }
     }
     class Player

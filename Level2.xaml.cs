@@ -36,9 +36,9 @@ namespace Pong
         Ball moving_ball;
         Player POne;
         Player PTwo;
-        Player obstacleOne;
-        Player obstacleTwo;
-        Player obstacleThree;
+        Obstacle obstacleOne;
+        //Player obstacleTwo;
+        //Player obstacleThree;
 
         bool PlOnemoveDown = false;
         bool PlOnemoveUp = false;
@@ -109,8 +109,14 @@ namespace Pong
         {
             while(true){
                 await Task.Delay(10);
+                updateObstacle();
                 update();
             }
+        }
+
+        private void updateObstacle()
+        {
+            obstacleOne.moveObstacle();
         }
 
         private void update()
@@ -144,8 +150,8 @@ namespace Pong
           //  obstacle1.SetValue(Canvas.LeftProperty, 300);
           //  obstacle1.SetValue(Canvas.TopProperty, 300);
 
-                 Canvas.SetLeft(obstacle1, obstacleOne.getX());
-                 Canvas.SetTop(obstacle1, obstacleOne.getY());
+                 Canvas.SetLeft(obstacle1, obstacleOne.x);
+                 Canvas.SetTop(obstacle1, obstacleOne.y);
 
 
             
@@ -195,7 +201,7 @@ namespace Pong
           
 
             // right player = player one
-            int height_rectangles = 120;
+            int height_rectangles = 80;
             int width_rectangles = 20;
 
             POne = new Player((int)c.ActualWidth-(50 + width_rectangles), (int)c.ActualHeight / 2-60);
@@ -217,13 +223,13 @@ namespace Pong
 
 
             // draw obstacles
-            obstacleOne = new Player((int)c.ActualWidth - (50 + width_rectangles), (int)c.ActualHeight / 2 - 60);
-          //  obstacleOne.setMin(0);
-          //  obstacleOne.setMax((int)c.ActualHeight - height_rectangles);
+            obstacleOne = new Obstacle((int)c.ActualWidth / 2 - 10, (int)c.ActualHeight / 2 - 40);
+            obstacleOne.min=0;
+            obstacleOne.max=(int)c.ActualHeight - height_rectangles;
             obstacle1 = new Rectangle();
             obstacle1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 123, 23, 123));
             obstacle1.Width = width_rectangles;
-            obstacle2.Height = height_rectangles;
+            obstacle1.Height = height_rectangles;
 
        //     Canvas.SetLeft(obstacle1, 300);
        //     Canvas.SetTop(obstacle1, 200);
@@ -251,6 +257,8 @@ namespace Pong
 
             this.level2.Children.Add(ball);
         }
+
+
 
         
         private void Key_Down(object sender, KeyRoutedEventArgs e)
@@ -307,6 +315,42 @@ namespace Pong
 
     }
 
-    
+    class Obstacle{
 
+        // getter und setter Methode für x und y
+        public int x { get; set; }
+        public int y { get; set; }
+
+        public int min { get; set; }
+        public int max { get; set; }
+
+        int speed = 2;
+        bool isMovingUp = true;
+        public Obstacle(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+        public void moveObstacle()
+        {
+            if(isMovingUp){
+                this.y -= this.speed;
+                if (this.y < this.min)
+                {
+                    this.y = this.min;
+                    isMovingUp = false;
+                }
+            }
+            else
+            {
+                this.y += this.speed;
+                if (this.y > this.max)
+                {
+                    this.y = this.max;
+                    isMovingUp = true;
+                }
+            }
+        }
+    }   
 }
