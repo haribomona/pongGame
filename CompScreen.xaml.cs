@@ -34,6 +34,7 @@ namespace Pong
         Player POne;
         Player PTwo;
 
+
         bool PlOnemoveDown = false;
         bool PlOnemoveUp = false;
         bool PlTwomoveDown = false;
@@ -56,6 +57,11 @@ namespace Pong
             moveBall();
             initGameLoop();
             
+        }
+
+        private void Back_To_Selection_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
 
 

@@ -96,11 +96,11 @@ namespace Pong
                     moving_ball = new Ball(350, 250);
 
                 }
-                if (PlayerTwoPoints > PlayerOnePoints)
+              /*  if (PlayerTwoPoints > PlayerOnePoints)
                 {
                     gameFlow = false;
                     this.Frame.Navigate(typeof(GameScreen));
-                }
+                }*/
             }
            
         }

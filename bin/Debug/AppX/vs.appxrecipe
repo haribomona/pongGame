@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-07-09T06:38:43.652</Modified>
+      <Modified>2014-07-10T06:39:38.151</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Pong.exe">
       <PackagePath>Pong.exe</PackagePath>
-      <Modified>2014-07-09T07:36:42.926</Modified>
+      <Modified>2014-07-10T06:55:32.277</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\field-football-pitch-soccer-green-playground.png">
       <PackagePath>Assets\field-football-pitch-soccer-green-playground.png</PackagePath>
@@ -53,9 +53,17 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-06-03T13:29:06.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\Assets\victory.jpg">
+      <PackagePath>Assets\victory.jpg</PackagePath>
+      <Modified>2014-07-09T12:45:41.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
       <Modified>2014-07-06T16:25:06.948</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\WinScreen.xbf">
+      <PackagePath>WinScreen.xbf</PackagePath>
+      <Modified>2014-07-10T06:55:31.958</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\Level2.xbf">
       <PackagePath>Level2.xbf</PackagePath>
@@ -63,11 +71,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\CompScreen.xbf">
       <PackagePath>CompScreen.xbf</PackagePath>
-      <Modified>2014-07-07T08:37:59.731</Modified>
+      <Modified>2014-07-10T06:55:31.960</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\GameScreen.xbf">
       <PackagePath>GameScreen.xbf</PackagePath>
-      <Modified>2014-07-06T16:25:06.956</Modified>
+      <Modified>2014-07-10T06:55:31.961</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\StartScreen.xbf">
       <PackagePath>StartScreen.xbf</PackagePath>
@@ -75,7 +83,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ramona8.1\documents\visual studio 2013\Projects\Pong\Pong\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-07-09T06:38:43.106</Modified>
+      <Modified>2014-07-10T06:39:37.583</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

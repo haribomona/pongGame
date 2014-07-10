@@ -108,6 +108,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinScreen.xaml.cs">
+      <DependentUpon>WinScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Level2.xaml.cs">
       <DependentUpon>Level2.xaml</DependentUpon>
     </Compile>
@@ -135,12 +138,17 @@
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\Sport-Activities-Ping-pong-icon.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\victory.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="WinScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Level2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

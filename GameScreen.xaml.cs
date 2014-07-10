@@ -33,6 +33,8 @@ namespace Pong
         Ball moving_ball;
         Player POne;
         Player PTwo;
+        Image Win = new Image();
+
 
         bool PlOnemoveDown = false;
         bool PlOnemoveUp = false;
@@ -70,6 +72,9 @@ namespace Pong
                 {
                     PlayerOnePoints++;
                     PlayerOne_Counter.Text = "" + PlayerOnePoints;
+                    if(PlayerOne_Counter.Text == "5"){
+                        this.Frame.Navigate(typeof(WinScreen));
+                    }
                     moving_ball = new Ball(350, 250);
 
                 }
@@ -77,6 +82,10 @@ namespace Pong
                 {
                     PlayerTwoPoints++;
                     PlayerTwo_Counter.Text = "" + PlayerTwoPoints;
+                    if (PlayerTwo_Counter.Text == "5")
+                    {
+                        this.Frame.Navigate(typeof(WinScreen));
+                    }
                     moving_ball = new Ball(350, 250);
 
                 }
@@ -209,6 +218,11 @@ namespace Pong
                     PlTwomoveUp = false;
                     break;
             }
+        }
+
+        private void Back_To_Selection_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         

@@ -124,21 +124,23 @@ namespace Pong.Pong_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
-            _typeNameTable[0] = "Pong.Level2";
+            _typeNameTable = new string[7];
+            _typeNameTable[0] = "Pong.WinScreen";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Pong.CompScreen";
-            _typeNameTable[4] = "Pong.GameScreen";
-            _typeNameTable[5] = "Pong.MainPage";
+            _typeNameTable[3] = "Pong.Level2";
+            _typeNameTable[4] = "Pong.CompScreen";
+            _typeNameTable[5] = "Pong.GameScreen";
+            _typeNameTable[6] = "Pong.MainPage";
 
-            _typeTable = new global::System.Type[6];
-            _typeTable[0] = typeof(global::Pong.Level2);
+            _typeTable = new global::System.Type[7];
+            _typeTable[0] = typeof(global::Pong.WinScreen);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Pong.CompScreen);
-            _typeTable[4] = typeof(global::Pong.GameScreen);
-            _typeTable[5] = typeof(global::Pong.MainPage);
+            _typeTable[3] = typeof(global::Pong.Level2);
+            _typeTable[4] = typeof(global::Pong.CompScreen);
+            _typeTable[5] = typeof(global::Pong.GameScreen);
+            _typeTable[6] = typeof(global::Pong.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -173,10 +175,11 @@ namespace Pong.Pong_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_Level2() { return new global::Pong.Level2(); }
-        private object Activate_3_CompScreen() { return new global::Pong.CompScreen(); }
-        private object Activate_4_GameScreen() { return new global::Pong.GameScreen(); }
-        private object Activate_5_MainPage() { return new global::Pong.MainPage(); }
+        private object Activate_0_WinScreen() { return new global::Pong.WinScreen(); }
+        private object Activate_3_Level2() { return new global::Pong.Level2(); }
+        private object Activate_4_CompScreen() { return new global::Pong.CompScreen(); }
+        private object Activate_5_GameScreen() { return new global::Pong.GameScreen(); }
+        private object Activate_6_MainPage() { return new global::Pong.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -188,9 +191,9 @@ namespace Pong.Pong_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Pong.Level2
+            case 0:   //  Pong.WinScreen
                 userType = new global::Pong.Pong_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_Level2;
+                userType.Activator = Activate_0_WinScreen;
                 xamlType = userType;
                 break;
 
@@ -202,21 +205,27 @@ namespace Pong.Pong_XamlTypeInfo
                 xamlType = new global::Pong.Pong_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Pong.CompScreen
+            case 3:   //  Pong.Level2
                 userType = new global::Pong.Pong_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_CompScreen;
+                userType.Activator = Activate_3_Level2;
                 xamlType = userType;
                 break;
 
-            case 4:   //  Pong.GameScreen
+            case 4:   //  Pong.CompScreen
                 userType = new global::Pong.Pong_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_GameScreen;
+                userType.Activator = Activate_4_CompScreen;
                 xamlType = userType;
                 break;
 
-            case 5:   //  Pong.MainPage
+            case 5:   //  Pong.GameScreen
                 userType = new global::Pong.Pong_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_MainPage;
+                userType.Activator = Activate_5_GameScreen;
+                xamlType = userType;
+                break;
+
+            case 6:   //  Pong.MainPage
+                userType = new global::Pong.Pong_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_MainPage;
                 xamlType = userType;
                 break;
             }
